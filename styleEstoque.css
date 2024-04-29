@@ -1,0 +1,31 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.form-container{
+    max-width: 350px;
+    padding: 1rem;
+}
+
+#consultaEstoque {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color:rgb(52, 58, 64);
+    width: 83%;
+    margin-left: 8%;
+    border-style: solid black;
+    border-color: rgb(0, 0, 0);   
+    
+}
+
+#consultaEstoque, table, th, td{  
+
+    border: 1px solid black;    
+    border-style: solid black;
+    
+}
+
+.teste {
+    font-size: 5rem;
+}
