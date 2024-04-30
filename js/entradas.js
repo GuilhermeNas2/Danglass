@@ -1,13 +1,13 @@
 let carrinho = []
 let divCar = document.getElementById("carrinhoEntrada");
 let divError = document.createElement("span");
+let nome = 0;
 
 divError.style = "font-size: 2rem; display: flex; align-items: center;"
 
-
 let z = 0;
 
-const doc = new jsPDF();
+
 
 function displaySelected() {
     divError.innerText = '';   
@@ -19,7 +19,8 @@ function displaySelected() {
            
     var displayText = "<div data-index='" + z + "'>" + selectedValue1 + ", " + selectedValue2 + ", "
                          + selectedValue3 + "(" + selectedValue4 + ` ) <i class='mx-2 fa-solid fa-xmark'></i> </div>`; 
-                        
+                       
+                       
     carrinho.push({
        "id": z, 
        "tipo": selectedValue1, 
@@ -73,6 +74,7 @@ function enviaBanco(event, modulo){
         divCar.appendChild(divError) ;             
         geraPdf(carrinho);
         carrinho = [];
+        nome++
         
     }).fail((res)=>{      
         divError.innerText = 'O Estoque não possui essa quantidade, refaça a operação.'; 
@@ -112,11 +114,14 @@ function enviarInformacao() {
 };
 
 
-function geraPdf(data) {    
+function geraPdf(data) {   
+    const doc = new jsPDF();
+     
     let arrayPdf = []
     const caracteristicas = ['tipo','chapa','espessura','quantidade'];
     let x = 70;
     let y = 40;
+    
 
     doc.text('Alterações no estoque',x,10);
     
@@ -135,7 +140,9 @@ function geraPdf(data) {
         doc.text(key,x,y);
         y += 10;
     });
-    doc.save('a5.pdf');
+    doc.save(nome+'.pdf');
+    
+   
 };
 
 

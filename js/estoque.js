@@ -5,7 +5,7 @@ function sendData(event) {
     if (event) {
         event.preventDefault();
     } 
-            
+
     var titulo = document.querySelector("th")
     let body = document.querySelector("tbody");
     body.innerHTML = '';
@@ -31,9 +31,8 @@ function sendData(event) {
                 ; // Obtém o elemento contêiner onde o novo elemento será adicionado
                
                 titulo.textContent = responseData.tipo; // Define o texto do novo elemento como os dados recebidos    
-
                 let infos = programa(responseData.data);
-                console.log(infos);
+                
                 for (const espessura in infos) {
                     if (infos.hasOwnProperty(espessura)) {
                             let trF = document.createElement("tr");                        
