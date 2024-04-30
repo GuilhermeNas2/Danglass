@@ -2,14 +2,15 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
+
 $responsepage = array();
 $dados = $_POST["array"];
 $modulo = $_POST["modo"];
+
 $conexao = mysqli_connect("localhost", "root", "", "cadastrodanglass");
 
-
 foreach ($dados as $key => $val) {
-    var_dump($val['quantidade']);
+    
     $sql = "SELECT quantidade FROM cadastrodanglass.produto WHERE tipo = '".$val['tipo']."' AND chapa = '".$val['chapa']."' AND espessura = '".$val['espessura']."'";
     $retornoqtd = mysqli_query($conexao, $sql);
     $row = mysqli_fetch_assoc($retornoqtd);
@@ -18,24 +19,26 @@ foreach ($dados as $key => $val) {
         $quantidade = $val["quantidade"] + $row['quantidade'];
     }
     if ($modulo == 2) {
-        if($row['quantidade']>=$val['quantidade']){
+        if($row['quantidade'] >= $val['quantidade']){
             $quantidade = $row["quantidade"] - $val['quantidade'];
-            var_dump(1);
-        }else{
-            echo "Estoque não ser ficar negativo!";
-            var_dump(2);
-        }
-    }
+            
+        }else{                       
+            http_response_code(500);               
+        };
+    };
+
+    if(isset($quantidade)){
+        $sql =  "UPDATE cadastrodanglass.produto SET quantidade = ".$quantidade." WHERE tipo = '".$val['tipo']."' AND chapa = '".$val['chapa']."' AND espessura = '".$val['espessura']."'";
+        $resultado = mysqli_query($conexao, $sql);
+
+        $result = array(
+            "value"=>"Foi"
+        );
+       
+    };
     
-    
-    
-    
-    
-    $sql =  "UPDATE cadastrodanglass.produto SET quantidade = ".$quantidade." WHERE tipo = '".$val['tipo']."' AND chapa = '".$val['chapa']."' AND espessura = '".$val['espessura']."'";
-    
-    $resultado = mysqli_query($conexao, $sql);
-}
+};
 
 
-
+echo json_encode($result)
 ?>

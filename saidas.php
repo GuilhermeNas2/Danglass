@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>   
     <link rel="stylesheet" href="styleEntradas.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://kit.fontawesome.com/8b665a2e02.js" crossorigin="anonymous"></script>
 
 </head>
 <body class="bg-dark" data-bs-theme="dark">    

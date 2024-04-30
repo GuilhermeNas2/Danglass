@@ -1,64 +1,63 @@
 
 
 function sendData(event) {
+
     if (event) {
         event.preventDefault();
-    }         
+    } 
+            
+    var titulo = document.querySelector("th")
+    let body = document.querySelector("tbody");
+    body.innerHTML = '';
+    titulo.textContent = '';
     
     var xhr = new XMLHttpRequest();
     var url = "recebeEstoque.php"; // Script PHP para buscar os dados
-    var data = new FormData()
-    var tipo = document.getElementById("tipo").value  
-    var chapa = document.getElementById("chapa").value  
-    var espessura = document.getElementById("espessura").value    
-     
+    var data = new FormData();
+    var tipo = document.getElementById("tipo").value; 
+    var chapa = document.getElementById("chapa").value;  
+    var espessura = document.getElementById("espessura").value; 
 
-
-    data.append("tipo", tipo)  
-    data.append("chapa", chapa) 
-    data.append("espessura", espessura)                        
-    console.log(chapa)
+    data.append("tipo", tipo);  
+    data.append("chapa", chapa); 
+    data.append("espessura", espessura);   
 
     xhr.open("POST", url, true);
 
-            xhr.onreadystatechange = function () {
+    xhr.onreadystatechange = function () {
+
             if (xhr.readyState === 4 && xhr.status === 200) {
                 var responseData = JSON.parse(xhr.responseText) // Recebe os dados do servidor
-                var titulo = document.querySelector("th"); // Obtém o elemento contêiner onde o novo elemento será adicionado
+                ; // Obtém o elemento contêiner onde o novo elemento será adicionado
                
-                titulo.textContent = responseData.tipo; // Define o texto do novo elemento como os dados recebidos
-                var respessura = responseData.data
-                console.log(respessura)
-                let teste = respessura.map(x=>x.espessura)              
-               
-                    
+                titulo.textContent = responseData.tipo; // Define o texto do novo elemento como os dados recebidos    
+
                 let infos = programa(responseData.data);
+                console.log(infos);
                 for (const espessura in infos) {
                     if (infos.hasOwnProperty(espessura)) {
                             let trF = document.createElement("tr");                        
                             let tr = document.createElement("tr");
                             let td = document.createElement("td");
-
+                              
                             // Defina o atributo rowspan na célula da nova linha
                             td.textContent = espessura;
-                            td.setAttribute("rowspan", "7");                                                    
+                            td.setAttribute("rowspan", "7");    
+                            td.style = "text-align: center; font-size: 2rem";                                                  
                             tr.setAttribute("class", "w-50");
-                            // trF.setAttribute("class", "w-100");
-
+                            
                             // Adicione a célula à nova linha
                             tr.appendChild(td);
                             trF.appendChild(tr);
-
-                            // Adicione a nova linha à tabela
-                            
+                            // Adicione a nova linha à tabela                            
                         
                         //Criar logica para inserir TR, depois inserir as linhas (para as espessuras)
-                        infos[espessura].forEach(chapa => {
-                            console.log(`Espessura: ${chapa.quantidade}`);  
+                        infos[espessura].forEach(chapa => {                              
                             let tr = document.createElement("tr");
-                            let td = document.createElement("td");  
+                            let td = document.createElement("td"); 
+
                             tr.setAttribute("class", "w-100");
-                            tr.style = "font-size: 1.3rem; width:50%"
+                            tr.style = "font-size: 1.1rem; width:50%"
                             td.setAttribute("class", "w-100 px-5");
                             td.textContent = chapa.espessura + " (" + chapa.quantidade + ")";
 
@@ -66,11 +65,12 @@ function sendData(event) {
                             trF.appendChild(tr);
                             
                         });
-                        document.querySelector("tbody").appendChild(trF);
+                        body.appendChild(trF);
                     }
                 } 
         }
     };
+
     xhr.send(data); // Envia a solicitação para buscar os dados
     
 }
