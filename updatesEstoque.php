@@ -25,18 +25,36 @@ foreach ($dados as $key => $val) {
         if($row['quantidade'] >= $val['quantidade']){
             $quantidade = $row["quantidade"] - $val['quantidade'];
             
-        }else{                       
+        }else{              
+            $result = array(
+                "value" => "O Estoque não possui essa quantidade, refaça a operação."
+            );         
             http_response_code(500);               
         };
     };
 
     if(isset($quantidade)){
-        $sql =  "UPDATE cadastrodanglass.produto SET quantidade = ".$quantidade." WHERE tipo = '".$val['tipo']."' AND chapa = '".$val['chapa']."' AND espessura = '".$val['espessura']."'";
-        $resultado = mysqli_query($conexao, $sql);
+        mysqli_begin_transaction($conexao);
+        try {
+            $sql =  "UPDATE cadastrodanglass.produto SET quantidade = ".$quantidade." WHERE tipo = '".$val['tipo']."' AND chapa = '".$val['chapa']."' AND espessura = '".$val['espessura']."'";
+            $resultado = mysqli_query($conexao, $sql); 
 
-        $result = array(
-            "value"=>"Foi"
-        );
+            if (!($resultado)) {
+                throw new mysqli_sql_exception("Erro durante a execução da consulta SQL");
+            }; 
+
+            mysqli_commit($conexao);
+            $result = array(
+                "value" => "Operação feita com sucesso"
+            );
+
+        } catch (mysqli_sql_exception $exception) {
+            mysqli_rollback($conexao);
+            $result = array(
+                "value" => "Operação não concluida"
+            );
+            http_response_code(500); 
+        };    
        
     };
     

@@ -2,47 +2,49 @@ let carrinho = []
 let divCar = document.getElementById("carrinhoEntrada");
 let divError = document.createElement("span");
 let nome = 0;
+let z = 0;
+const caracteristicas = ['tipo','chapa','espessura','quantidade'];
 
 divError.style = "font-size: 2rem; display: flex; align-items: center;"
-
-let z = 0;
-
-
 
 function displaySelected() {
     divError.innerText = '';   
 
-    var selectedValue1 = document.getElementById("tipo").value;
-    var selectedValue2 = document.getElementById("chapa").value;
-    var selectedValue3 = document.getElementById("espessura").value;
-    var selectedValue4 = document.getElementById("quantidade").value;
-           
-    var displayText = "<div data-index='" + z + "'>" + selectedValue1 + ", " + selectedValue2 + ", "
-                         + selectedValue3 + "(" + selectedValue4 + ` ) <i class='mx-2 fa-solid fa-xmark'></i> </div>`; 
-                       
+    var input1 = document.getElementById("tipo").value;
+    var input2 = document.getElementById("chapa").value;
+    var input3 = document.getElementById("espessura").value;
+    var input4 = document.getElementById("quantidade").value;
+    
+    if(input1 == ""  || input2 == "" || input3 == "" || input4 == "" ){
+        divError.innerText = 'Os campos devem ser preenchidos.';
+        divCar.appendChild(divError);
+        return
+    } 
+    
+    var displayText = "<div data-index='" + z + "'>" + input1 + ", " + input2 + ", "
+                         + input3 + "(" + input4 + ` ) <i class='mx-2 fa-solid fa-xmark'></i> </div>`;                        
                        
     carrinho.push({
        "id": z, 
-       "tipo": selectedValue1, 
-       "chapa": selectedValue2,
-       "espessura": selectedValue3,
-       "quantidade": selectedValue4,
+       "tipo": input1, 
+       "chapa": input2,
+       "espessura": input3,
+       "quantidade": input4,
     });
        
     divCar.innerHTML += displayText;
     
-    document.getElementById("tipo").value = "";
-    document.getElementById("chapa").value = "";
-    document.getElementById("espessura").value = "";
-    document.getElementById("quantidade").value = "";
+    caracteristicas.map((element) => {
+        document.getElementById(element).value = "";
+    });   
 
     document.querySelectorAll('.fa-xmark').forEach(icon => {
         icon.addEventListener('click', function() {
             var index = parseInt(this.parentNode.getAttribute('data-index'));
             var indexi = carrinho.map(function(o) { return o.id; }).indexOf(index);             
-            // Remove o item do array
+            
             carrinho.splice(indexi, 1);            
-            // Remove a div correspondente
+            
             this.parentNode.remove();           
            
         });
@@ -70,14 +72,14 @@ function enviaBanco(event, modulo){
             modo:modulo 
         }
     }).done((res)=>{
-        divError.innerText = 'Operação feita com sucesso';   
+        divError.innerText = res['value'];   
         divCar.appendChild(divError) ;             
         geraPdf(carrinho);
         carrinho = [];
         nome++
         
     }).fail((res)=>{      
-        divError.innerText = 'O Estoque não possui essa quantidade, refaça a operação.'; 
+        divError.innerText = res['value']; 
         divCar.appendChild(divError) ;  
         carrinho = [];     
     });    
@@ -117,8 +119,7 @@ function enviarInformacao() {
 function geraPdf(data) {   
     const doc = new jsPDF();
      
-    let arrayPdf = []
-    const caracteristicas = ['tipo','chapa','espessura','quantidade'];
+    let arrayPdf = []    
     let x = 70;
     let y = 40;
     
@@ -140,8 +141,7 @@ function geraPdf(data) {
         doc.text(key,x,y);
         y += 10;
     });
-    doc.save(nome+'.pdf');
-    
+    doc.save(nome+'.pdf');   
    
 };
 

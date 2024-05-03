@@ -8,7 +8,7 @@ class Conexao {
     private $conexao;
 
     public function __construct(){
-        $this->conexao = mysqli_connect($this->localhost, $this->user,$this->passw, $this->banco);
+        $this->conexao = new mysqli($this->localhost, $this->user,$this->passw, $this->banco);
 
         if(mysqli_connect_error()){
             die('Erro de conexão: ' . mysqli_connect_error());
