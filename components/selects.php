@@ -18,9 +18,9 @@
 <?php
 
 try {
-    
-    $conexao = mysqli_connect("localhost", "root", "", "cadastrodanglass");
-    
+    require './conexao/conexao.php';
+    $conn = new Conexao(); 
+    $conexao = $conn->getConn(); 
 
     $sql = 'SELECT DISTINCT(tipo) FROM produto';
     $result = mysqli_query($conexao, $sql);
@@ -58,7 +58,7 @@ try {
                             <h4 class="card-title">
                                 Tipo
                             </h4>
-                            <select class="form-select form-select-lg mb-3" name="tipo" id ="tipo" aria-label="Large select example">
+                            <select  class="form-select form-select-lg mb-3" name="tipo" id ="tipo" aria-label="Large select example">
                                 <option value ="" selected>Selecione</option>
                                 <?php
                                     foreach($tipo as $item){
@@ -75,7 +75,7 @@ try {
                             <h4 class="card-title">
                                 Espessura
                             </h4>
-                            <select class="form-select form-select-lg mb-3" name="espessura" id ="espessura" aria-label="Large select example">
+                            <select  class="form-select form-select-lg mb-3" name="espessura" id ="espessura" aria-label="Large select example">
                                 <option value ="" selected>Selecione</option>
                                 <?php
                                     foreach($espec as $item){
@@ -92,7 +92,7 @@ try {
                             <h4 class="card-title">
                                 Chapa
                             </h4>
-                            <select class="form-select form-select-lg mb-3" name="chapa" id ="chapa" aria-label="Large select example">
+                            <select  class="form-select form-select-lg mb-3" name="chapa" id ="chapa" aria-label="Large select example">
                                 <option value ="" selected>Selecione</option>
                                 <?php
                                     foreach($chapa as $item){

@@ -37,8 +37,15 @@
                 </div>
                                 
             </form>
+            <div id="consultaEstoque" class="mb-4">
+                <div class="text-center">
+                    <h2 id="tituloEstoque"></h2>
+                </div>
+                <div id="body">
 
-            <table id="consultaEstoque" class="mb-4">
+                </div>
+            </div>
+            <!-- <table id="consultaEstoque" class="mb-4">
                 <thead>
                             
                         <tr class="text-center">
@@ -49,7 +56,7 @@
                 <tbody>  
                 </tbody>
             </table>
-            
+             -->
                 
         <script src="./js/estoque.js">
          

@@ -3,11 +3,14 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
+require './conexao/conexao.php';
+
 $responsepage = array();
 $dados = $_POST["array"];
 $modulo = $_POST["modo"];
 
-$conexao = mysqli_connect("localhost", "root", "", "cadastrodanglass");
+$conn = new Conexao(); 
+$conexao = $conn->getConn(); 
 
 foreach ($dados as $key => $val) {
     

@@ -161,4 +161,4 @@ function getDate() {
     let dataFormatada = horaFormatada +" "+ dia + '/' + mes + '/' + ano;
 
     return dataFormatada
-}
+};

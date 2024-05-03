@@ -3,8 +3,13 @@
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
+
 session_start();
-$conexao = mysqli_connect("localhost", "root", "", "cadastrodanglass");
+
+require './conexao/conexao.php';
+$conn = new Conexao(); 
+
+$conexao = $conn->getConn(); 
 //Recebendo as informações do formulário (estoque.php)
 
 $cond ="";
@@ -27,18 +32,13 @@ if(isset($_POST['espessura']) && !empty($_POST['espessura'])){
    $espessura = ""; 
 }
 
-
-
 //Identificando o ID do produto a partir das informações (Tipo, Chapa, Espessura)
 
 $sql = "SELECT * FROM cadastrodanglass.produto WHERE ".$cond;
 $retorno = mysqli_query($conexao, $sql);
 $result = array();
 
-
-
-while($row = mysqli_fetch_array($retorno)) {
-    //$nego[] = $rowid['espessura'];
+while($row = mysqli_fetch_array($retorno)) {    
     $result[] = array(
         'id'=> $row['id'],
         'espessura'=> $row['espessura'],
@@ -52,15 +52,6 @@ $contador = 0;
 foreach($result as $qtd) {
     $contador += $qtd['quantidade'];
 }
-
-
-//Selecionando o campo (Quantidade) referente ao ID encontrado
-
-//$sql = "SELECT quantidade FROM cadastrodanglass.produto WHERE id = '".$row['id']."'";
-//$retornoqtd = mysqli_query($conexao, $sql);
-//$row = mysqli_fetch_assoc($retornoqtd);
-
-//var_dump($result);
 
 $tipo .= " ".$chapa." ".$espessura." (".$contador.")";
 
