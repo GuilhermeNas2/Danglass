@@ -17,17 +17,19 @@
     <?php
         include './components/menu.php'
     ?>
+    <main class= 'container mt-5 fw-light text-center'>
+        <h2 class='mb-5'>Editar usuários</h2>
+        <form onsubmit="sendData(event)" action="">
+            <label class='container' for="">
+                Email
+                <input id="uEmail" type="text">
+            </label>
 
-    <form onsubmit="sendData(event)" action="">
-        <label for="">
-            Email
-            <input id="uEmail" type="text">
-        </label>
-
-        <button type="submit">Procurar</button>
-    </form>
-    <div id="user"></div>
-
+            <button type="submit" class="btn-md btn btn-outline-light mt-5">Procurar</button>
+        </form>
+        <div id="user"></div>
+        <div id="mensagem"></div>
+    </main>
     <script src="./js/userConfig.js"></script>
 </body>
 </html>

@@ -9,8 +9,7 @@ $conn = new Conexao();
 $conexao = $conn->getConn();
 
 $id = $_POST['key'];
-if(isset($_POST['valor'])){
-
+if(isset($_POST['valor'])){    
     $infos = $_POST['valor'];
     $string = '';
 
@@ -34,18 +33,58 @@ if(isset($_POST['valor'])){
         };
     };
 
-    $sql = "UPDATE usuarios SET ".$string." WHERE id=".$id."";
-    $response = mysqli_query($conexao, $sql);
+    mysqli_begin_transaction($conexao);
+    
+    try {
+        $sql = "UPDATE usuarios SET ".$string." WHERE id=".$id."";
+        $response = mysqli_query($conexao, $sql);
 
-    var_dump($sql);
+        
+        if (!($response)) {
+            throw new mysqli_sql_exception("Erro durante a execução da consulta SQL");
+        }; 
+
+        mysqli_commit($conexao);
+        $result = array(
+            "value" => "Operação feita com sucesso"
+        );
+       
+
+    } catch (mysqli_sql_exception $exception) {
+
+        mysqli_rollback($conexao);
+        $result = array(
+            "value" => "Operação não concluida"
+        );
+        http_response_code(500); 
+
+    };            
 };
 
-if(!(isset($_POST['valor']))){
-    $sql = "DELETE FROM usuarios WHERE id=".$id;
-    $response = mysqli_query($conexao, $sql);
+if(!isset($_POST['valor'])){
+    mysqli_begin_transaction($conexao);
+    try {
+        $sql = "DELETE FROM usuarios WHERE id=".$id;
+        $response = mysqli_query($conexao, $sql);
+        
+        if (!($response)) {
+            throw new mysqli_sql_exception("Erro durante a execução da consulta SQL");
+        }; 
 
-    var_dump($sql);
+        mysqli_commit($conexao);
+        $result = array(
+            "value" => "Usuario excluido"
+        );       
+
+    } catch (mysqli_sql_exception $exception) {
+
+        mysqli_rollback($conexao);
+        $result = array(
+            "value" => "Operação não concluida"
+        );
+        http_response_code(500); 
+    };        
 };
 
-
+echo json_encode($result);
 ?>
