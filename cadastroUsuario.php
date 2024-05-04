@@ -11,9 +11,7 @@
 </head>
 <body class="bg-dark" data-bs-theme="dark">
     <header class="navbar navbar-expand-lg bg-body-tertiary">
-
         <div id="navBar" class="container">
-
             <h1 class="navbar-brand">Danglass</h1>
             
             <style>
@@ -21,11 +19,8 @@
                     cursor:pointer;
                     
                 }
-            </style>
-
-                
+            </style>                
         </div>
-
     </header>
 
     <main class="w-100 m-auto form-container mt-5 d-flex justify-content-center" >
@@ -50,9 +45,7 @@
                       <option value="1">Administrador</option>
                       <option value="2">Administrador Master</option>                  
                     </select>
-                </div>
-            
-            
+                </div>      
             <button class="btn btn-primary w-100 py-2 mt-3" type ="submit">Cadastrar</button>
         </form>
     </main>

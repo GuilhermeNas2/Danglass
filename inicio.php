@@ -1,6 +1,27 @@
 <?php
+
+    header('Content-Type: text/html; charset=utf-8');
+
     require 'verifica.php';
+    
     if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
+    require './conexao/conexao.php';
+
+    $conn = new Conexao(); 
+    $conexao = $conn->getConn(); 
+
+    $tipoUser = $_SESSION['tipoUser'];
+    
+    $sql = "SELECT display,nome FROM viewTelas WHERE codigo =".$tipoUser;
+    $result = mysqli_query($conexao, $sql);
+    
+    while($row = mysqli_fetch_array($result)){
+        $data[] = array(
+            'nome'=> $row['nome'],
+            'display'=> utf8_encode($row['display'])
+        );
+               
+    };    
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +49,7 @@
 
    <div id="navbar-entradas" class="container mt-5 fw-light text-center d-grid gap-4 col-5 mx-auto" >
 
-        <a href="entradas.php?pg=entradas" class= "btn-lg btn btn-outline-light lead"> Entradas </a>
+        <!-- <a href="entradas.php?pg=entradas" class= "btn-lg btn btn-outline-light lead"> Entradas </a>
 
         <a href="saidas.php?pg=saidas" class="btn-lg btn btn-outline-light"> Saídas </a>
 
@@ -37,7 +58,12 @@
         <a href="requisicoesAdm.php?pg=requisicoesAdm" class="btn-lg btn btn-outline-light"> Requisições-ADM </a>
 
         <a href="estoque.php?pg=estoque" class="btn-lg btn btn-outline-light"> Estoque </a>
-        
+         -->
+         <?php
+            foreach($data as $key => $value){
+                ?>    <a href="saidas.php?pg="<?php echo $data[$key]['nome'] ?> class="btn-lg btn btn-outline-light"> <?php echo $data[$key]['display'] ?> </a> <?php
+            }
+         ?>
         
     
         
