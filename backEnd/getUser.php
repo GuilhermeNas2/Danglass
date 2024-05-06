@@ -10,16 +10,28 @@ $conexao = $conn->getConn();
 
 $email = $_POST['valor'];
 
-$sql = "SELECT * FROM usuarios WHERE email='".$email."'";
+$sql = "SELECT id,nome,
+            CASE tipoUsuario
+            WHEN 0 THEN 'Normal'
+            WHEN 1 THEN 'Administrador'
+            WHEN 2 THEN 'Administrador Master'
+            END AS tipoUsuario
+             FROM usuarios WHERE email='".$email."'";
 $response = mysqli_query($conexao, $sql);
 $row = mysqli_fetch_assoc($response);
 
+$sql = "SELECT tipo FROM tipouser ";
+$response = mysqli_query($conexao, $sql);
+$arrayType = array();
+while($rowS = mysqli_fetch_assoc($response)){
+    $arrayType[] =  $rowS;
+};
+
 $result = array( 
     "id"=> $row['id'],
-    "nome"=> $row['nome'],
-    "email"=> $row['email'],
-    "senha"=> $row['senha'],
-    "tipoUsuario"=> $row['tipoUsuario']
+    "nome"=> $row['nome'],    
+    "tipoUsuario"=> $row['tipoUsuario'],
+    "tipos"=> $arrayType
 );
 
 

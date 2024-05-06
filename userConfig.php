@@ -17,18 +17,62 @@
     <?php
         include './components/menu.php'
     ?>
-    <main class= 'container mt-5 fw-light text-center'>
-        <h2 class='mb-5'>Editar usuários</h2>
+    <main class= 'container mt-5 fw-light'>
+        <h2 class='mb-5 text-center'>Edição de usuário</h2>
         <form onsubmit="sendData(event)" action="">
-            <label class='container' for="">
-                Email
-                <input id="uEmail" type="text">
-            </label>
-
-            <button type="submit" class="btn-md btn btn-outline-light mt-5">Procurar</button>
+            <div class="form-floating mt-1">
+                <input type="email" class="form-control" id="email" name="email" placeholder="email" maxlength="100"/>
+                <label for="email">Digite o E-mail:</label>
+            </div>            
+            <div id="baixaEntrada" class="mt-3 mb-5" style=" justify-content: end;  text-align: right;">
+                <button type ="submit" class="btn btn-secondary">
+                        <i class="bi bi-search"></i>
+                        Buscar
+                </button>
+            </div>
         </form>
-        <div id="user"></div>
-        <div id="mensagem"></div>
+        <div id="user" style='display:none;'>
+            <section id="sobre" class="row mt-5">
+                    <form onsubmit='updateUser(event)'>
+                        <div class="col-12 mb-3">
+                            <div class="card">
+                                <div class="card-body d-flex flex-column justify-content-start">
+                                <span id='userName'> </span>
+                                    
+                                    <div class="mb-4">
+                                        <p class="mt-3 mb-1">Mudar  Usuário para:</p>
+                                        <select name="tipo" id="tipo" class="form-select  mt-1 mb-3" aria-label="Large select example">
+                                            <option selected>Selecione</option>                                          
+                                        
+                                        </select>
+                                        <div class="d-flex justify-content-end aling-items-end">
+                                            <button type ="submit" class="btn btn-secondary">
+                                                <i class="bi bi-check2-circle"></i>
+                                                Concluir
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <hr class="mt-3">
+                                    
+                                    <div class="mt-2">
+                                
+                                    <button type ="button" onclick='deleteUser(event)'  class="btn btn-outline-secondary lead text-light">
+                                        <i class="bi bi-x"></i>
+                                        Deletar Usuário
+                                    </button>
+
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </section>
+        </div>
+        <div id="mensagem" class='text-center'></div>
     </main>
     <script src="./js/userConfig.js"></script>
 </body>

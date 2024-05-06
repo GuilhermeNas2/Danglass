@@ -72,14 +72,21 @@ function enviaBanco(event, modulo){
             modo:modulo 
         }
     }).done((res)=>{
-        divError.innerText = res['value'];   
-        divCar.appendChild(divError) ;             
-        geraPdf(carrinho);
-        carrinho = [];
-        nome++
+        if(!(res['error'])){
+            divError.innerText = res['value'];   
+            divCar.appendChild(divError) ;             
+            geraPdf(carrinho);
+            carrinho = [];
+            nome++
+        } else {
+            divError.innerText = res['value']; 
+            divCar.appendChild(divError) ;  
+            carrinho = [];  
+        }
         
-    }).fail((res)=>{      
-        divError.innerText = res['value']; 
+        
+    }).fail((res)=>{          
+        divError.innerText = 'Falha durante a execução tente novamente'; 
         divCar.appendChild(divError) ;  
         carrinho = [];     
     });    

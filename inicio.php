@@ -48,20 +48,9 @@
    </div>
 
    <div id="navbar-entradas" class="container mt-5 fw-light text-center d-grid gap-4 col-5 mx-auto" >
-
-        <!-- <a href="entradas.php?pg=entradas" class= "btn-lg btn btn-outline-light lead"> Entradas </a>
-
-        <a href="saidas.php?pg=saidas" class="btn-lg btn btn-outline-light"> Saídas </a>
-
-        <a href="requisicoes.php?pg=requisicoes" class="btn-lg btn btn-outline-light"> Requisições </a>
-        
-        <a href="requisicoesAdm.php?pg=requisicoesAdm" class="btn-lg btn btn-outline-light"> Requisições-ADM </a>
-
-        <a href="estoque.php?pg=estoque" class="btn-lg btn btn-outline-light"> Estoque </a>
-         -->
          <?php
             foreach($data as $key => $value){
-                ?>    <a href="saidas.php?pg="<?php echo $data[$key]['nome'] ?> class="btn-lg btn btn-outline-light"> <?php echo $data[$key]['display'] ?> </a> <?php
+                ?>    <a href=<?php echo $data[$key]['nome'].".php?pg=".$data[$key]['nome'] ?> class="btn-lg btn btn-outline-light"> <?php echo $data[$key]['display'] ?> </a> <?php
             }
          ?>
         
