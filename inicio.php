@@ -6,7 +6,11 @@
     
     if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
     
-        require './conexao/conexao.php';
+    require './conexao/conexao.php';
+    require './backend/log.php';
+
+    $archive = new Log();
+     
 
     $conn = new Conexao(); 
     $conexao = $conn->getConn(); 
@@ -17,12 +21,15 @@
     $result = mysqli_query($conexao, $sql);
     $row = mysqli_fetch_assoc($result);
 
+    $archive->writeLog("\n".$sql."  --->  ".$row['tipoUsuario']."\n" );   
+
     mysqli_free_result($result);
   
     $sql = "SELECT display,nome FROM viewTelas WHERE codigo =".$row['tipoUsuario'];
-    $result = mysqli_query($conexao, $sql);
-   
-    while($row = mysqli_fetch_array($result)){        
+    $result = mysqli_query($conexao, $sql);   
+
+    while($row = mysqli_fetch_array($result)){     
+        $archive->writeLog("\n".$sql."--->".$row['display']." -- ".$row['nome']."\n" );      
         $data[] = array(
             'nome'=> $row['nome'],
             'display'=> utf8_encode($row['display'])

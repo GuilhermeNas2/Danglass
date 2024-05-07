@@ -141,12 +141,21 @@ function geraPdf(data) {
        
     });    
 
-    arrayPdf.map((key) => {            
-        doc.text(key,x,y);
-        y += 10;
+    arrayPdf.map((key) => {           
+        if(y < 200){
+            doc.text(key+y,x,y);
+            y += 10;
+        } 
+
+        if(y >= 200) {
+            doc.addPage();
+            doc.text(key,x,y);
+            y += 10;
+        }
+       console.log(y)
     });
     doc.save(nome+'.pdf');   
-   
+    y = 70;
 };
 
 

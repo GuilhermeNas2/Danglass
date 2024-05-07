@@ -4,7 +4,9 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
 require '../conexao/conexao.php';
+require '../backEnd/log.php';
 
+$content = new Log();
 $conn = new Conexao();
 $conexao = $conn->getConn();
 
@@ -25,12 +27,13 @@ if(isset($_POST['valor'])){
         $infos = $row['codigo'];
         
         $sql = "UPDATE usuarios SET tipoUsuario=".$infos." WHERE id=".$id."";
-        $response = mysqli_query($conexao, $sql);
+        $content->writeLog("\n".$sql."\n");
         
+        $response = mysqli_query($conexao, $sql);       
               
         
-        if (!($response)) {
-            throw new mysqli_sql_exception("Erro durante a execução da consulta SQL");
+        if (!($response)) {            
+            throw new mysqli_sql_exception($conexao->error);            
         }; 
 
         mysqli_commit($conexao);        
@@ -40,6 +43,7 @@ if(isset($_POST['valor'])){
        
 
     } catch (mysqli_sql_exception $exception) {
+        $content->writeLog("\n".$sql." -----> ".$exception."\n");
 
         mysqli_rollback($conexao);
         $result = array(
@@ -55,6 +59,7 @@ if(!isset($_POST['valor'])){
     mysqli_begin_transaction($conexao);
     try {
         $sql = "DELETE FROM usuarios WHERE id=".$id;
+        $content->writeLog("\n".$sql."\n");
         $response = mysqli_query($conexao, $sql);
         
         if (!($response)) {
@@ -69,6 +74,7 @@ if(!isset($_POST['valor'])){
         );       
 
     } catch (mysqli_sql_exception $exception) {
+        $content->writeLog("\n".$sql." -----> ".$exception."\n");
 
         mysqli_rollback($conexao);
         $result = array(

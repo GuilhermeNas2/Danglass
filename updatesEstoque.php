@@ -4,6 +4,9 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
 require './conexao/conexao.php';
+require './backEnd/log.php';
+
+$content = new Log();
 
 $responsepage = array();
 $dados = $_POST["array"];
@@ -59,11 +62,13 @@ if(!(isset($cond))) {
             mysqli_begin_transaction($conexao);
             try {
                 $sql =  "UPDATE cadastrodanglass.produto SET quantidade = ".$quantidade." WHERE tipo = '".$val['tipo']."' AND chapa = '".$val['chapa']."' AND espessura = '".$val['espessura']."'";
+                $content->writeLog("\n".$sql."\n");
+
                 $response = mysqli_query($conexao, $sql); 
                 $quantidade = 0;
                 
                 if (!($response)) {
-                    throw new mysqli_sql_exception("Erro duante a execução da consulta SQL");
+                    throw new mysqli_sql_exception($conexao->error);
                 }; 
     
                 mysqli_commit($conexao);
@@ -75,6 +80,7 @@ if(!(isset($cond))) {
                 
     
             } catch (mysqli_sql_exception $exception) {
+                $content->writeLog("\n".$sql." -----> ".$exception."\n");
                 mysqli_rollback($conexao);           
                 http_response_code(500); 
             };    
