@@ -1,4 +1,6 @@
 <?php
+require './conexao/conexao.php';
+
 $conn = new Conexao(); 
 $conexao = $conn->getConn(); 
 $responsepage =array();

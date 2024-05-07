@@ -5,7 +5,8 @@
     require 'verifica.php';
     
     if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
-    require './conexao/conexao.php';
+    
+        require './conexao/conexao.php';
 
     $conn = new Conexao(); 
     $conexao = $conn->getConn(); 
