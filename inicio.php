@@ -62,10 +62,7 @@
             foreach($data as $key => $value){
                 ?>    <a href=<?php echo $data[$key]['nome'].".php?pg=".$data[$key]['nome'] ?> class="btn-lg btn btn-outline-light"> <?php echo $data[$key]['display'] ?> </a> <?php
             }
-         ?>
-        
-    
-        
+         ?>  
    </div>
 
 </body>

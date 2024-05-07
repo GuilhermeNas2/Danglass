@@ -33,114 +33,14 @@ if (mysqli_num_rows($result) > 0) {
 </head>
 <body class="bg-dark" data-bs-theme="dark">
     
-    <header class="navbar bg-body-tertiary">
-
-        <div id="navBar" class="container">
-            <a class="link-offset-2 link-underline link-underline-opacity-0" href="inicio.php">
-                <h1 class="navbar-brand">Danglass</h1>
-            
-            </a>
-
-            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-                <i class="bi bi-list"></i>
-            </button>
-
-            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                <div class="offcanvas-header">
-
-                  
-                    <h4 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel">Menu</h4>
-                    
-                </div>
-                <hr class="me-3 ms-3 mt-0">
-
-                <ul class="nav nav-pills flex-column mb-auto ms-4" >
-
-                    <li class="">
-                        
-                        <a class="nav-link text-light" href="inicio.php" class="nav-link active" aria-current="page">
-                            
-                            Página Inicial
-                        </a>
-                    </li>
-
-                    <li class="">
-                        
-                        <a class="nav-link text-white" href="entradas.php" class="nav-link active" aria-current="page">
-                            
-                            Entradas
-                        </a>
-                    </li>
-
-                    <li class="">
-                        
-                        <a class="nav-link text-white" href="saidas.php" class="nav-link active " aria-current="page">
-                            
-                            Saídas
-                        </a>
-                    </li>
-
-                    <li class="">
-                        
-                        <a class="nav-link text-white" href="requisicoes.php" class="nav-link active" aria-current="page">
-                            
-                            Requisições
-                        </a>
-                    </li>
-
-                    <li class="">
-                        
-                        <a class="nav-link text-white" href="requisicoesAdm.php" class="nav-link active" aria-current="page">
-                            
-                            Requisições - Adm
-                        </a>
-                    </li>
-
-                    <li class="">
-                        
-                        <a class="nav-link text-white" href="estoque.php" class="nav-link active" aria-current="page">
-                            
-                            Estoque
-                        </a>
-                    </li>
-
-                </ul>
-
-                <hr class="me-3 ms-3">
-
-                <div class="dropdown ms-5 hstack mb-3">
-                    <a href="" class="d-flex aling-items-center link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
-                    <i class="bi bi-person-circle me-2"></i>
-                    <strong>Perfil</strong>
-                    </a>
-                    
-                    <ul class="dropdown-menu text-small " style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -34px);" data-popper-placement="top-start">
-                        <li>
-                            <a href="cadastroUsuario.php" class="dropdown-item">Cadastrar Usuário</a>
-                        </li>
-
-                        <hr class="mb-1">
-                        
-                        <li>
-                            <button class="btn"> Sair da Conta</button>
-                        </li>
-                    </ul>
-                        
-                </div>
-                    
-            
-            </div>
-
-        </div>
-
-    </header>
+    <?php
+        include './components/menu.php'
+    ?>
     <div class="container mt-5 mb-5 fw-light text-center">
         <h2>Requisições - ADM</h2>
         
 
-    </div>
-        
-
+    </div>   
     <main class="w-100 m-auto form-container">
         <form>
            

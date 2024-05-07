@@ -1,3 +1,25 @@
+<?php 
+require './conexao/conexao.php';
+
+$conn = new Conexao(); 
+$conexao = $conn->getConn();     
+
+$sql = "SELECT tipo, codigo FROM tipouser ";
+$response = mysqli_query($conexao, $sql);
+$arrayType = array();
+
+while($rowS = mysqli_fetch_assoc($response)){    
+    $arrayType[] =  array(
+        "tipo" => $rowS['tipo'],
+        "cod" => $rowS['codigo']
+    );
+};
+
+mysqli_free_result($response);
+mysqli_close($conexao);
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,12 +34,10 @@
 <body class="bg-dark" data-bs-theme="dark">
     <header class="navbar navbar-expand-lg bg-body-tertiary">
         <div id="navBar" class="container">
-            <h1 class="navbar-brand">Danglass</h1>
-            
+            <h1 class="navbar-brand">Danglass</h1>            
             <style>
                 button{
-                    cursor:pointer;
-                    
+                    cursor:pointer;                    
                 }
             </style>                
         </div>
@@ -41,9 +61,14 @@
                 <div class="form-floating mt-3">
                     <select class="form-select" id="tipoUsuario" name="tipoUsuario" aria-label="Floating label select example">
                       <option selected>Tipo do Usuário:</option>
-                      <option value="0">Normal</option> 
+                      <?php
+                            foreach($arrayType as $key => $value){
+                                ?>    <option value=" <?php echo $arrayType[$key]['cod'] ?>"> <?php echo $arrayType[$key]['tipo'] ?> </option> <?php
+                            }
+                        ?>  
+                      <!-- <option value="0">Normal</option> 
                       <option value="1">Administrador</option>
-                      <option value="2">Administrador Master</option>                  
+                      <option value="2">Administrador Master</option>                   -->
                     </select>
                 </div>      
             <button class="btn btn-primary w-100 py-2 mt-3" type ="submit">Cadastrar</button>
