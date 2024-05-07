@@ -1,5 +1,6 @@
 <?php 
-$conexao = mysqli_connect("localhost", "root", "", "cadastrodanglass");
+$conn = new Conexao(); 
+$conexao = $conn->getConn(); 
 $sql = "SELECT * FROM requisicoes";
 $result = mysqli_query($conexao, $sql);
 

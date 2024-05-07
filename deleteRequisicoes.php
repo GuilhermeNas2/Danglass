@@ -1,6 +1,8 @@
 <?php
+$conn = new Conexao(); 
+$conexao = $conn->getConn(); 
 $responsepage =array();
-$conexao = mysqli_connect("localhost", "root", "", "cadastrodanglass");
+
 $infowhere = "";
 $info = $_POST["selecionados"];
 if (count($info)>1){
