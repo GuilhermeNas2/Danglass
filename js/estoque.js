@@ -35,21 +35,7 @@ function sendData(event) {
                 let infos = programa(responseData.data);
                 
                 for (const espessura in infos) {
-                    if (infos.hasOwnProperty(espessura)) {
-                            // let trF = document.createElement("tr");                        
-                            // let tr = document.createElement("tr");
-                            // let td = document.createElement("td");
-                              
-                            // // Defina o atributo rowspan na célula da nova linha
-                            // td.textContent = espessura;
-                            // td.setAttribute("rowspan", "7");    
-                            // td.style = "text-align: center; font-size: 2rem";                                                  
-                            // tr.setAttribute("class", "w-50");
-                            
-                            // // Adicione a célula à nova linha
-                            // tr.appendChild(td);
-                            // trF.appendChild(tr);
-                            // Adicione a nova linha à tabela         
+                    if (infos.hasOwnProperty(espessura)) {                                  
                             
                             let divF = document.createElement("div");
                             let div = document.createElement("div");
@@ -65,19 +51,7 @@ function sendData(event) {
 
                            
                         //Criar logica para inserir TR, depois inserir as linhas (para as espessuras)
-                        infos[espessura].forEach(chapa => {          
-                                               
-                            // let tr = document.createElement("tr");
-                            // let td = document.createElement("td"); 
-
-                            // tr.setAttribute("class", "w-100");
-                            // tr.style = "font-size: 1.1rem; width:50%"
-                            // td.setAttribute("class", "w-100 px-5");
-                            // td.textContent = chapa.espessura + " (" + chapa.quantidade + ")";
-
-                            // tr.appendChild(td);
-                            // trF.appendChild(tr);
-                            
+                        infos[espessura].forEach(chapa => {   
 
                             let div = document.createElement("div");
                             let span = document.createElement("span");

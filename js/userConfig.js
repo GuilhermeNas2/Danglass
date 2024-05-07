@@ -34,12 +34,12 @@ function sendData(event) {
             const option = document.createElement('option');  
             option.setAttribute('value', type['tipo']);
             option.innerText = type['tipo'];
-
+            
             select.appendChild(option);
         });    
 
     }).fail((res)=> {
-       h2.innerText = 'Usuário Não encontrado';
+       h2.innerText = 'Usuário não encontrado';
        div.appendChild(h2); 
     });
 };
@@ -60,10 +60,10 @@ function updateUser(event) {
             key: id
         }
     }).done((res)=> {
-        h2.innerText = res['value'];
+        Swal.fire(res['value']);
         div.appendChild(h2); 
     }).fail((res)=> {
-        h2.innerText = res['value'];
+        Swal.fire(res['value']);
         div.appendChild(h2); 
     });
 }
@@ -80,11 +80,12 @@ function deleteUser(event) {
             key: id
         }
     }).done((res)=> {       
+       Swal.fire(res['value']);
        h2.innerText = res['value'];
        div.appendChild(h2); 
        
     }).fail((res)=> {
-        h2.innerText = res['value']; 
+        Swal.fire(res['value']); 
         div.appendChild(h2); 
     });
 };

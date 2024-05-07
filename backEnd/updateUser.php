@@ -10,29 +10,7 @@ $conexao = $conn->getConn();
 
 $id = $_POST['key'];
 if(isset($_POST['valor'])){    
-    $infos = $_POST['valor'];
-    
-    // $string = '';
-
-    // if(count($infos) == 1) {
-        
-    //     $cond = "'".$infos[0]['e']."'";  
-
-    //     $string = $infos[0]['id']." = ".$cond;
-    // } else {
-    //     foreach($infos as $key => $value ) {        
-            
-    //         $cond = "'".$infos[$key]['e']."'";          
-        
-    //         if(count($infos) != $key + 1) {
-    //             $string .= $infos[$key]['id']." = ".$cond.", ";        
-    //         }; 
-
-    //         if(count($infos) == $key + 1) {
-    //             $string .= $infos[$key]['id']." = ".$cond;
-    //         };
-    //     };
-    // };
+    $infos = $_POST['valor'];  
 
     mysqli_begin_transaction($conexao);
     
@@ -40,18 +18,22 @@ if(isset($_POST['valor'])){
         $sql = "SELECT codigo FROM tipouser WHERE tipo='".$infos."'";
         $response = mysqli_query($conexao, $sql);
         $row = mysqli_fetch_assoc($response);
+
+        mysqli_free_result($response);
+        
         
         $infos = $row['codigo'];
         
         $sql = "UPDATE usuarios SET tipoUsuario=".$infos." WHERE id=".$id."";
         $response = mysqli_query($conexao, $sql);
         
+              
         
         if (!($response)) {
             throw new mysqli_sql_exception("Erro durante a execução da consulta SQL");
         }; 
 
-        mysqli_commit($conexao);
+        mysqli_commit($conexao);        
         $result = array(
             "value" => "Operação feita com sucesso"
         );
@@ -65,7 +47,8 @@ if(isset($_POST['valor'])){
         );
         http_response_code(500); 
 
-    };            
+    };   
+    mysqli_close($conexao);         
 };
 
 if(!isset($_POST['valor'])){
@@ -78,7 +61,9 @@ if(!isset($_POST['valor'])){
             throw new mysqli_sql_exception("Erro durante a execução da consulta SQL");
         }; 
 
+        mysqli_free_result($response);  
         mysqli_commit($conexao);
+
         $result = array(
             "value" => "Usuario excluido"
         );       
@@ -90,7 +75,8 @@ if(!isset($_POST['valor'])){
             "value" => "Operação não concluida"
         );
         http_response_code(500); 
-    };        
+    };   
+    mysqli_close($conexao);     
 };
 
 echo json_encode($result);

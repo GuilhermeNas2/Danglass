@@ -1,6 +1,5 @@
 <?php
 
-$conexao = mysqli_connect("localhost", "root", "", "cadastrodanglass");
 class Usuario{
 
     public function login($email, $senha){
@@ -13,10 +12,8 @@ class Usuario{
         $sql->execute();
 
         if($sql->rowCount() > 0 ){
-            $dado = $sql->fetch();
-            
-            $_SESSION['idUser'] = $dado['id'];
-            $_SESSION['tipoUser'] = $dado['tipoUsuario'];
+            $dado = $sql->fetch();            
+            $_SESSION['idUser'] = $dado['id'];          
             
             return true;
         }else{
@@ -39,11 +36,8 @@ class Usuario{
             return $array;
         }
    
-        //public function verificatipo ($id){
-           // global $pdo;
-          //  $sql = "SELECT tipoUsuario FROM usuarios WHERE id =:id";           
-           // $resultado = mysqli_query($conexao, $sql);
-        }
+        
+}
 
     
 

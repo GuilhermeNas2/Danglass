@@ -10,18 +10,27 @@
     $conn = new Conexao(); 
     $conexao = $conn->getConn(); 
 
-    $tipoUser = $_SESSION['tipoUser'];
-    
-    $sql = "SELECT display,nome FROM viewTelas WHERE codigo =".$tipoUser;
+    $id = $_SESSION['idUser'];
+
+    $sql = "SELECT tipoUsuario FROM usuarios WHERE id =".$id;
     $result = mysqli_query($conexao, $sql);
-    
-    while($row = mysqli_fetch_array($result)){
+    $row = mysqli_fetch_assoc($result);
+
+    mysqli_free_result($result);
+  
+    $sql = "SELECT display,nome FROM viewTelas WHERE codigo =".$row['tipoUsuario'];
+    $result = mysqli_query($conexao, $sql);
+   
+    while($row = mysqli_fetch_array($result)){        
         $data[] = array(
             'nome'=> $row['nome'],
             'display'=> utf8_encode($row['display'])
         );
                
-    };    
+    };   
+    
+    mysqli_free_result($result);
+    mysqli_close($conexao);
 ?>
 
 <!DOCTYPE html>

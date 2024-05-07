@@ -20,12 +20,20 @@ $sql = "SELECT id,nome,
 $response = mysqli_query($conexao, $sql);
 $row = mysqli_fetch_assoc($response);
 
-$sql = "SELECT tipo FROM tipouser ";
-$response = mysqli_query($conexao, $sql);
-$arrayType = array();
-while($rowS = mysqli_fetch_assoc($response)){
-    $arrayType[] =  $rowS;
+if($response){
+    mysqli_free_result($response);
+
+    $sql = "SELECT tipo FROM tipouser ";
+    $response = mysqli_query($conexao, $sql);
+    $arrayType = array();
+    while($rowS = mysqli_fetch_assoc($response)){
+        $arrayType[] =  $rowS;
+    };
+
+    mysqli_free_result($response);
 };
+
+mysqli_close($conexao);
 
 $result = array( 
     "id"=> $row['id'],

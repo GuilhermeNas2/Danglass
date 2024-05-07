@@ -1,11 +1,13 @@
 let carrinho = []
 let divCar = document.getElementById("carrinhoEntrada");
+divCar.style = "font-size: 1.2rem;";
+
 let divError = document.createElement("span");
 let nome = 0;
 let z = 0;
 const caracteristicas = ['tipo','chapa','espessura','quantidade'];
 
-divError.style = "font-size: 2rem; display: flex; align-items: center;"
+divError.style = "font-size: 1.6rem; margin-top: 1em; display: flex; align-items: center;"
 
 function displaySelected() {
     divError.innerText = '';   
@@ -22,7 +24,7 @@ function displaySelected() {
     } 
     
     var displayText = "<div data-index='" + z + "'>" + input1 + ", " + input2 + ", "
-                         + input3 + "(" + input4 + ` ) <i class='mx-2 fa-solid fa-xmark'></i> </div>`;                        
+                         + input3 + " ( "+ input4 + " ) <i class='mx-2 fa-solid fa-xmark'></i> </div>";                        
                        
     carrinho.push({
        "id": z, 
@@ -76,22 +78,20 @@ function enviaBanco(event, modulo){
             divError.innerText = res['value'];   
             divCar.appendChild(divError) ;             
             geraPdf(carrinho);
-            carrinho = [];
+            carrinho = [];            
             nome++
         } else {
             divError.innerText = res['value']; 
-            divCar.appendChild(divError) ;  
-            carrinho = [];  
-        }
-        
+            divCar.appendChild(divError);           
+            carrinho = []; 
+        };        
         
     }).fail((res)=>{          
         divError.innerText = 'Falha durante a execução tente novamente'; 
-        divCar.appendChild(divError) ;  
-        carrinho = [];     
-    });    
-    divCar.innerHTML = "";       
-    
+        divCar.appendChild(divError);
+        carrinho = []; 
+    });             
+    divCar.innerHTML = ""; 
 };
 
 function enviarInformacao() {

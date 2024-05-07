@@ -1,14 +1,34 @@
+<?php 
+$conexao = mysqli_connect("localhost", "root", "", "cadastrodanglass");
+$sql = "SELECT * FROM requisicoes";
+$result = mysqli_query($conexao, $sql);
+
+$data = array();
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_array($result)) {
+        $data[] = $row;
+    };
+};
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edição de Usuário - Danglass</title>
+    <title>Requisições ADM - Danglass</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styleR.css">
+
 </head>
 <body class="bg-dark" data-bs-theme="dark">
+    
     <header class="navbar bg-body-tertiary">
 
         <div id="navBar" class="container">
@@ -30,11 +50,11 @@
                 </div>
                 <hr class="me-3 ms-3 mt-0">
 
-                <ul class="nav nav-pills flex-column mb-auto ms-3" >
+                <ul class="nav nav-pills flex-column mb-auto ms-4" >
 
                     <li class="">
                         
-                        <a class="nav-link text-light" href="PaginaInicial.html" class="nav-link active" aria-current="page">
+                        <a class="nav-link text-light" href="inicio.php" class="nav-link active" aria-current="page">
                             
                             Página Inicial
                         </a>
@@ -42,7 +62,7 @@
 
                     <li class="">
                         
-                        <a class="nav-link text-white" href="Entradas.html" class="nav-link active" aria-current="page">
+                        <a class="nav-link text-white" href="entradas.php" class="nav-link active" aria-current="page">
                             
                             Entradas
                         </a>
@@ -66,7 +86,7 @@
 
                     <li class="">
                         
-                        <a class="nav-link text-white" href="RequisicoesAdm.html" class="nav-link active" aria-current="page">
+                        <a class="nav-link text-white" href="requisicoesAdm.php" class="nav-link active" aria-current="page">
                             
                             Requisições - Adm
                         </a>
@@ -74,7 +94,7 @@
 
                     <li class="">
                         
-                        <a class="nav-link text-white" href="Estoque.html" class="nav-link active" aria-current="page">
+                        <a class="nav-link text-white" href="estoque.php" class="nav-link active" aria-current="page">
                             
                             Estoque
                         </a>
@@ -98,7 +118,7 @@
                         <hr class="mb-1">
                         
                         <li>
-                            <a href="logout.php" class="dropdown-item">Sair</a>
+                            <button class="btn"> Sair da Conta</button>
                         </li>
                     </ul>
                         
@@ -110,80 +130,56 @@
         </div>
 
     </header>
-    
-    <main class="container mt-5 fw-light text-center">
-        <h2>Edição de Usuários</h2>
-    </main>
-
-
-    <form class="mt-4" action="">
-        <div class="container">
-            
-    
-            <div class="form-floating mt-1">
-                <input type="email" class="form-control" id="email" name="email" placeholder="email" maxlength="100"/>
-                <label for="email">Digite o E-mail:</label>
-            </div>
-
-            <div id="baixaEntrada" class="mt-3 mb-5" style=" justify-content: end;  text-align: right;">
-                <button type ="submit" class="btn btn-secondary">
-                    <i class="bi bi-search"></i>
-                    Buscar
-                </button>
-    
-            </div>
-
-           
-            <section id="sobre" class="row mt-5">
-                <form action="">
-                    <div class="col-12 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                
-                                <strong> Daniela da Silva - Administrador(a)</strong>
-                                
-                                <div class="mb-4">
-                                    <p class="mt-3 mb-1">Mudar  Usuário para:</p>
-                                    <select name="tipo" id="tipo" class="form-select  mt-1 mb-3" aria-label="Large select example">
-                                        <option selected>Selecione</option>
-                                        <option value="Normal">Normal</option>
-                                        <option value="Administrador">Administrador</option>
-                                        <option value="Administrador Master">Administrador Master</option>
-                                    
-                                    </select>
-                                    <div class="d-flex justify-content-end aling-items-end">
-                                        <button type ="submit" class="btn btn-secondary">
-                                            <i class="bi bi-check2-circle"></i>
-                                            Concluir
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                                <hr class="mt-3">
-                                
-                                <div class="mt-2">
-                            
-                                <button type ="button" onclick='deleteUser(event)' class="btn btn-outline-secondary lead text-light">
-                                    <i class="bi bi-x"></i>
-                                    Deletar Usuário
-                                </button>
-
-                                </div>
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
-                </form>
-
-			</section>
-
-        </div>
-
+    <div class="container mt-5 mb-5 fw-light text-center">
+        <h2>Requisições - ADM</h2>
         
 
-    </form>
-   
+    </div>
+        
 
+    <main class="w-100 m-auto form-container">
+        <form>
+           
+            <div class="container vstack mt-5 gap-2 text-center d-flex justify-content-center">
+                    <?php
+                        foreach ($data as $row) {
+                            ?>
+                            <div class="form-check text-start my-3 d-flex justify-content-center mt-0">
+                            <div class="d-flex justify-content-start me-5 "><p><?php echo $row['data'];?></p></div>                           
+                            <label class="fw-medium" form-check-label
+                            for="flexCheckDefault"><?php echo $row['tipo']."     "; echo $row['chapa']."     "; echo $row['espessura']."     ("; echo $row['quantidade'].")"; ?></label>                           
+                            <input data-id="<?php echo $row['id'];?>" type="checkbox" class="  form-check-input ms-5 me-3" id="check">
+                        </div>
+        
+                        <hr> 
+                            <?php
+                        }
+                    ?>
+            </div>
+        </form>
+
+
+        <style>
+        
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f5f5f5; 
+            padding: 10px; 
+        }
+    </style>
+    </main>
+    
+     <footer class="d-flex justify-content-center bg-body-tertiary">
+        
+        <div class="container mt-2 mb-2  d-flex justify-content-end">
+            <button id="btnFinalizar" type="button" class="btn btn-secondary ">Finalizar</button>
+        </div>
+        
+     </footer>
+
+     <script src="./js/requisicoes.js"></script>
 </body>
 </html>
