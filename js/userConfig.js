@@ -80,8 +80,7 @@ function deleteUser(event) {
             key: id
         }
     }).done((res)=> {       
-       Swal.fire(res['value']);
-       h2.innerText = res['value'];
+       Swal.fire(res['value']);       
        div.appendChild(h2); 
        
     }).fail((res)=> {

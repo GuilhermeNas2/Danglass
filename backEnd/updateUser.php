@@ -63,10 +63,9 @@ if(!isset($_POST['valor'])){
         $response = mysqli_query($conexao, $sql);
         
         if (!($response)) {
-            throw new mysqli_sql_exception("Erro durante a execução da consulta SQL");
+            throw new mysqli_sql_exception($conexao->error);
         }; 
-
-        mysqli_free_result($response);  
+                 
         mysqli_commit($conexao);
 
         $result = array(

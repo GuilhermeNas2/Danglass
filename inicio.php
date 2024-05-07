@@ -7,10 +7,9 @@
     if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
     
     require './conexao/conexao.php';
-    require './backend/log.php';
+    require './backEnd/log.php';
 
-    $archive = new Log();
-     
+    $archive = new Log();    
 
     $conn = new Conexao(); 
     $conexao = $conn->getConn(); 

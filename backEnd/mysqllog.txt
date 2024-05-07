@@ -76,3 +76,16 @@ Stack trace:
 UPDATE usuarios SET tipoUsuario=0 WHERE id=12
 
 UPDATE usuarios SET tipoUsuario=2 WHERE id=12
+
+UPDATE usuarios SET tipoUsuario=0 WHERE id=12
+  07/05/2024 21:39
+UPDATE usuarios SET tipoUsuario=1 WHERE id=12
+  07/05/2024 21:40
+DELETE FROM usuarios WHERE id=12
+  07/05/2024 21:40
+DELETE FROM usuarios WHERE id=13
+  07/05/2024 21:41
+DELETE FROM usuarios WHERE id=13
+  07/05/2024 21:42
+UPDATE usuarios SET tipoUsuario=1 WHERE id=12
+  07/05/2024 21:47

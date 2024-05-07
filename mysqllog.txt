@@ -1,0 +1,55 @@
+
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  1
+  07/05/2024 21:47
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Entradas -- entradas
+  07/05/2024 21:47
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Saída -- saidas
+  07/05/2024 21:47
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Requisições -- requisicoes
+  07/05/2024 21:47
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Estoque -- estoque
+  07/05/2024 21:47
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  1
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Entradas -- entradas
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Saída -- saidas
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Requisições -- requisicoes
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Estoque -- estoque
+  07/05/2024 21:48
+UPDATE cadastrodanglass.produto SET quantidade = 35 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  07/05/2024 21:48
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  1
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Entradas -- entradas
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Saída -- saidas
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Requisições -- requisicoes
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Estoque -- estoque
+  07/05/2024 21:48
+UPDATE cadastrodanglass.produto SET quantidade = 34 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  07/05/2024 21:48
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  1
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Entradas -- entradas
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Saída -- saidas
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Requisições -- requisicoes
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Estoque -- estoque
+  07/05/2024 21:48
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  1
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Entradas -- entradas
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Saída -- saidas
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Requisições -- requisicoes
+  07/05/2024 21:48
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Estoque -- estoque
+  07/05/2024 21:48
