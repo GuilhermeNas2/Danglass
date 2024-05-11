@@ -12,13 +12,9 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
     
 
     if($u->login($email, $senha) == true){      
-        if(isset($_SESSION['idUser'])){
+        if(isset($_SESSION['idUser'])){    
             
-            if($_SESSION['tipoUser'] === 0){                
-                header("Location: requisicoes.php");
-            }
-
-           if($_SESSION['tipoUser'] !== 0){            
+           if(isset($_SESSION['tipoUser'])){            
                 header("Location: inicio.php"); 
 
             }

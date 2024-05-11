@@ -28,10 +28,12 @@
     $result = mysqli_query($conexao, $sql);   
 
     while($row = mysqli_fetch_array($result)){     
-        $archive->writeLog("\n".$sql."--->".$row['display']." -- ".$row['nome']."\n" );      
+        $archive->writeLog("\n".$sql."--->".$row['display']." -- ".$row['nome']."\n" );         
+        
         $data[] = array(
             'nome'=> $row['nome'],
             'display'=> utf8_encode($row['display'])
+            
         );
                
     };   
@@ -65,7 +67,7 @@
 
    <div id="navbar-entradas" class="container mt-5 fw-light text-center d-grid gap-4 col-5 mx-auto" >
          <?php
-            foreach($data as $key => $value){
+            foreach($data as $key => $value){                
                 ?>    <a href=<?php echo $data[$key]['nome'].".php?pg=".$data[$key]['nome'] ?> class="btn-lg btn btn-outline-light"> <?php echo $data[$key]['display'] ?> </a> <?php
             }
          ?>  

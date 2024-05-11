@@ -16,6 +16,8 @@ $conn = new Conexao();
 $conexao = $conn->getConn(); 
 $string = 'Esses produtos não possuem estoque suficiente, refaça a operação:  ';
 
+$newQtd = array();
+
 
 if ($modulo == 2) {
     foreach ($dados as $key => $val) {
@@ -64,6 +66,11 @@ if(!(isset($cond))) {
                 $sql =  "UPDATE cadastrodanglass.produto SET quantidade = ".$quantidade." WHERE tipo = '".$val['tipo']."' AND chapa = '".$val['chapa']."' AND espessura = '".$val['espessura']."'";
                 $content->writeLog("\n".$sql."\n");
 
+                $newQtd[] = array(
+                    'id' => $val['id'],
+                    'qtd' => $quantidade
+                );
+
                 $response = mysqli_query($conexao, $sql); 
                 $quantidade = 0;
                 
@@ -74,7 +81,8 @@ if(!(isset($cond))) {
                 mysqli_commit($conexao);
 
                 $result = array(
-                    "value" => "Operação feita com sucesso"
+                    "value" => "Operação feita com sucesso",
+                    "newQtd" => $newQtd
                 );
                 
                 

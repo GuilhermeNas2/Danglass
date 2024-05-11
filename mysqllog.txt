@@ -53,3 +53,265 @@ SELECT display,nome FROM viewTelas WHERE codigo =1--->Requisições -- requisicoes
   07/05/2024 21:48
 SELECT display,nome FROM viewTelas WHERE codigo =1--->Estoque -- estoque
   07/05/2024 21:48
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  1
+  09/05/2024 03:06
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Entradas -- entradas
+  09/05/2024 03:06
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Saída -- saidas
+  09/05/2024 03:06
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Requisições -- requisicoes
+  09/05/2024 03:06
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Estoque -- estoque
+  09/05/2024 03:06
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  09/05/2024 03:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  09/05/2024 03:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  09/05/2024 03:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  09/05/2024 03:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  09/05/2024 03:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  09/05/2024 03:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  09/05/2024 03:09
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  09/05/2024 03:16
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  09/05/2024 03:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  09/05/2024 03:16
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  09/05/2024 03:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  09/05/2024 03:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  09/05/2024 03:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  09/05/2024 03:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  09/05/2024 03:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  09/05/2024 03:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  09/05/2024 03:17
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  09/05/2024 03:21
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  09/05/2024 03:21
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  09/05/2024 03:21
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  09/05/2024 03:21
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  09/05/2024 03:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  09/05/2024 03:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  09/05/2024 03:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  09/05/2024 03:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  09/05/2024 03:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  09/05/2024 03:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  09/05/2024 03:24
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  09/05/2024 03:27
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  09/05/2024 03:27
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  09/05/2024 03:27
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  09/05/2024 03:27
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  09/05/2024 03:27
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  09/05/2024 03:27
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  09/05/2024 03:27
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  10/05/2024 04:06
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  10/05/2024 04:06
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  10/05/2024 04:06
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  10/05/2024 04:06
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  10/05/2024 04:06
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  10/05/2024 04:06
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  10/05/2024 04:06
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  11/05/2024 15:09
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  11/05/2024 15:09
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  11/05/2024 15:09
+UPDATE cadastrodanglass.produto SET quantidade = 80 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '3mm'
+  11/05/2024 15:09
+UPDATE cadastrodanglass.produto SET quantidade = 24 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 15:10
+UPDATE cadastrodanglass.produto SET quantidade = 23 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 15:10
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  11/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  11/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  11/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  11/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  11/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  11/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  11/05/2024 17:18
+UPDATE cadastrodanglass.produto SET quantidade = 33 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:18
+UPDATE cadastrodanglass.produto SET quantidade = 43 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:19
+UPDATE cadastrodanglass.produto SET quantidade = 53 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:20
+UPDATE cadastrodanglass.produto SET quantidade = 90 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '3mm'
+  11/05/2024 17:20
+UPDATE cadastrodanglass.produto SET quantidade = 380 WHERE tipo = 'Cristal Fume' AND chapa = '1900cm x 3600cm' AND espessura = '3mm'
+  11/05/2024 17:20
+UPDATE cadastrodanglass.produto SET quantidade = 63 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:25
+UPDATE cadastrodanglass.produto SET quantidade = 73 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:26
+UPDATE cadastrodanglass.produto SET quantidade = 83 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:27
+UPDATE cadastrodanglass.produto SET quantidade = 93 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:28
+UPDATE cadastrodanglass.produto SET quantidade = 103 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:29
+UPDATE cadastrodanglass.produto SET quantidade = 113 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:30
+UPDATE cadastrodanglass.produto SET quantidade = 169 WHERE tipo = 'Cristal Fume' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:31
+UPDATE cadastrodanglass.produto SET quantidade = 123 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:32
+UPDATE cadastrodanglass.produto SET quantidade = 133 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:33
+UPDATE cadastrodanglass.produto SET quantidade = 20 WHERE tipo = 'Cristal' AND chapa = '2200cm X 3210cm' AND espessura = '3.15mm'
+  11/05/2024 17:34
+UPDATE cadastrodanglass.produto SET quantidade = 100 WHERE tipo = 'Espelho' AND chapa = '2200cm X 3210cm' AND espessura = '5mm'
+  11/05/2024 17:34
+UPDATE cadastrodanglass.produto SET quantidade = 233 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:37
+UPDATE cadastrodanglass.produto SET quantidade = 333 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:39
+UPDATE cadastrodanglass.produto SET quantidade = 433 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:42
+UPDATE cadastrodanglass.produto SET quantidade = 443 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:57
+UPDATE cadastrodanglass.produto SET quantidade = 100 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '3mm'
+  11/05/2024 17:58
+UPDATE cadastrodanglass.produto SET quantidade = 453 WHERE tipo = 'Cristal' AND chapa = '1900cm x 3600cm' AND espessura = '2mm'
+  11/05/2024 17:59
+UPDATE cadastrodanglass.produto SET quantidade = 100 WHERE tipo = 'Reflecta' AND chapa = '1900cm x 3600cm' AND espessura = '5mm'
+  11/05/2024 18:00
+UPDATE cadastrodanglass.produto SET quantidade = 1100 WHERE tipo = 'Reflecta' AND chapa = '2200cm X 3210cm' AND espessura = '3mm'
+  11/05/2024 18:00
+UPDATE cadastrodanglass.produto SET quantidade = 100 WHERE tipo = 'Cristal Fume' AND chapa = '2200cm X 3210cm' AND espessura = '6mm'
+  11/05/2024 18:00
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  11/05/2024 18:13
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  11/05/2024 18:13
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  11/05/2024 18:13
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  11/05/2024 18:13
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  11/05/2024 18:13
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  11/05/2024 18:13
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  11/05/2024 18:13

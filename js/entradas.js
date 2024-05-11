@@ -75,7 +75,17 @@ function enviaBanco(event, modulo){
         }
     }).done((res)=>{
         if(!(res['error'])){
-            Swal.fire(res['value']);                        
+            Swal.fire(res['value']);            
+            const qtd = res['newQtd'];            
+            carrinho.forEach(element => {                
+                qtd.map((key) => {
+                    if(element.id == key.id){                        
+                        element.qtd = key.qtd
+                    }
+                })
+                
+            }); 
+
             geraPdf(carrinho);
             carrinho = [];            
             nome++
@@ -91,42 +101,13 @@ function enviaBanco(event, modulo){
     divCar.innerHTML = ""; 
 };
 
-function enviarInformacao() {
-    var tipoReq = document.getElementById("tipoReq").value;
-    var chapaReq = document.getElementById("chapaReq").value;
-    var espessuraReq = document.getElementById("espessuraReq").value;
-    var quantidadeReq = document.getElementById("quantdadeReq").value;
-
-    $.ajax({
-        url:"requsicaoADM.php",
-        method: "POST",
-        dataType: "json",
-        data:{
-          tipoReq,
-          chapaReq,
-          espessuraReq,
-          quantidadeReq 
-    }
-    }).done((res)=>{
-        console.log(res);
-        divCar.innerText = ''
-    }).fail((res)=>{
-        console.log("nao estou aqui", res)
-        divCar.innerText = ''
-        
-    }       
-    );
-        
-};
-
 
 function geraPdf(data) {   
     const doc = new jsPDF();
-     
+    const teste = ['tipo','chapa','espessura','qtd']; 
     let arrayPdf = []    
     let x = 70;
-    let y = 40;
-    
+    let y = 40;   
 
     doc.text('Alterações no estoque',x,10);
     
@@ -135,25 +116,20 @@ function geraPdf(data) {
     
     doc.setFontSize(20);
     data.forEach(element => {
-        caracteristicas.map((key)=> {
-            arrayPdf.push(element[key]);
+        teste.map((key)=> {
+            let info = element[key].toString()
+            arrayPdf.push(info);
         });    
        
     });    
-
+    console.log(arrayPdf)
     arrayPdf.map((key) => {           
         if(y < 200){
-            doc.text(key+y,x,y);
-            y += 10;
-        } 
-
-        if(y >= 200) {
-            doc.addPage();
             doc.text(key,x,y);
             y += 10;
-        }
-       console.log(y)
+        }              
     });
+
     doc.save(nome+'.pdf');   
     y = 70;
 };
