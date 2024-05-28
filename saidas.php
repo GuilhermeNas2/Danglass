@@ -30,22 +30,22 @@
         include "./components/selects.php"
     ?> 
               
-     <div id="fEP2">
-        <div id="quantidadeEntrada" class="container mt-4 ">
-            <div class="input-group mx-auto">
-                <span class="input-group-text" id="quantidadeqtd">Quantidade</span>
-                <input name="quantidade" id="quantidade" type="number"class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            </div>
-        </div> 
+        <div id="fEP2">
+            <div id="quantidadeEntrada" class="container mt-4 ">
+                <div class="input-group mx-auto">
+                    <span class="input-group-text" id="quantidadeqtd">Quantidade</span>
+                    <input name="quantidade" id="quantidade" type="number"class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </div> 
 
             
-        <div id="iconeAdicionar" class=" container mt-3" style="text-align: right;">
+            <div id="iconeAdicionar" class=" container mt-3" style="text-align: right;">
 
-            <button onclick="displaySelected()" type="button" class="btn btn-outline-light">
-                    <i class="bi bi-plus "></i>    
-            </button>
+                <button onclick="displaySelected()" type="button" class="btn btn-outline-light">
+                        <i class="bi bi-plus "></i>    
+                </button>
 
-        </div>
+            </div>
 
         </div>
         <?php

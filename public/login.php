@@ -1,15 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     
- <form class="form "action="logar.php" method="POST">
+ <form class="form "action="/login" method="POST">
     <div class="card">
         <div class="card-top">
             <img class="imglogin" src="logo_nova.png" alt="">
@@ -37,3 +37,8 @@
 
 </body>
 </html>
+<?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        Auth::login($_POST['username'], $_POST['password']);
+    }
+?>

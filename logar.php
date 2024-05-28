@@ -1,24 +1,16 @@
 <?php
 
-if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) && !empty($_POST['senha'])){
-   
-    require 'conexao.php';
-    require 'Usuario.class.php';
+if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) && !empty($_POST['senha'])){   
+    
+    require 'auth.php';
 
-    $u = new Usuario();
+    $u = new Auth();
 
     $email = addslashes($_POST['email']);
-    $senha = addslashes($_POST['senha']);   
-    
+    $senha = addslashes($_POST['senha']);      
 
-    if($u->login($email, $senha) == true){      
-        if(isset($_SESSION['idUser'])){    
-            
-           if(isset($_SESSION['tipoUser'])){            
-                header("Location: inicio.php"); 
-
-            }
-        }    
-    }
-
+    $u->login($email, $senha) 
+    if(isset($_POST['logged_in']) !== true) 
+        header("Location: /login")
+    header("Location: /inicio")
 }

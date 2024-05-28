@@ -4,10 +4,12 @@ let id = '';
 
 const div = document.querySelector('#mensagem');
 const h2 = document.createElement('h2');
+const  divv = document.querySelector('#user');
 
 function sendData(event) {    
     event.preventDefault();
     h2.innerText = '';
+    
 
     const input = document.querySelector('#email').value;    
     
@@ -18,11 +20,9 @@ function sendData(event) {
         data: {
             valor: input
         }
-    }).done((res)=> {
-
-        const  divv = document.querySelector('#user');
+    }).done((res)=> {      
         const span = document.querySelector('#userName');        
-        const select = document.querySelector('select');      
+        const select = document.querySelector('select');     
         
         span.setAttribute('class', 'fw-bolder');
         divv.style = '';
@@ -39,6 +39,7 @@ function sendData(event) {
         });    
 
     }).fail((res)=> {
+       divv.innerText = ''; 
        h2.innerText = 'Usuário não encontrado';
        div.appendChild(h2); 
     });

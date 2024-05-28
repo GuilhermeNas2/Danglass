@@ -2,12 +2,12 @@
 
     header('Content-Type: text/html; charset=utf-8');
 
-    require 'verifica.php';
+    require '../verifica.php';
     
     if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
     
-    require './conexao/conexao.php';
-    require './backEnd/log.php';
+    require '../conexao/conexao.php';
+    require '../backEnd/log.php';
 
     $archive = new Log();    
 
@@ -54,10 +54,8 @@
 
 <body class="bg-dark" data-bs-theme="dark">
     <header class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container" >
-                
-                <h1 class="navbar-brand">Danglass</h1>
-            
+        <div class="container" >                
+                <h1 class="navbar-brand">Danglass</h1>            
         </div>
     </header>
 
@@ -75,6 +73,3 @@
 
 </body>
 </html>
-
-<?php else: header("Location: login.php"); endif;
-?> 
