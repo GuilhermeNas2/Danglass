@@ -38,13 +38,7 @@
             </div>
         </div> 
 
-            <div id="baixaEntrada" class="mt-5" style=" justify-content: end;  text-align: right;">
-                <button type="submit" class="btn btn-secondary" style="text-align: right;">
-                    <i class="bi bi-check-circle"></i>
-                    Dar baixa
-                </button>
-
-            </div>
+            
         <div id="iconeAdicionar" class=" container mt-3" style="text-align: right;">
 
             <button onclick="displaySelected()" type="button" class="btn btn-outline-light">
@@ -54,9 +48,9 @@
         </div>
 
         </div>
-
-
-        <div id="carrinhoEntrada" class="container mt-5 fw-light text-start" ></div>
+        <?php
+            include "./components/itensCar.php"
+        ?>
     </form>
 
        <script src="./js/entradas.js"></script>

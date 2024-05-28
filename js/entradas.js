@@ -1,5 +1,5 @@
 let carrinho = []
-let divCar = document.getElementById("carrinhoEntrada");
+let divCar = document.getElementById("conteudo");
 divCar.style = "font-size: 1.2rem;";
 
 let divError = document.createElement("span");

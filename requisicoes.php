@@ -21,68 +21,9 @@
      <h2>Requisições</h2>
 </main>
     <form id="formRequisicoes" onsubmit="salvarNoBancoDeDados(event)">
-        <div id="formularioRequisicoes">
-            <div id="fRP1" class="container vstack mt-4 gap-4">
-            
-                <div id="tiposRequisicoes" class="card text-center">
-        
-                    <div class="card-body">
-
-                        <h4 class="card-title">
-                            Tipo
-                        </h4>
-                        <select id ="tipoReq" name = "tipo" class="form-select form-select-lg mb-3" aria-label="Large select example">
-                            <option value=""selected>Selecione</option>
-                            <option value="Cristal">Cristal</option>
-                            <option value="Cristal Fume">Cristal Fume</option>
-                            <option value="Reflecta">Cristal Reflecta</option>
-                            <option value="Espelho">Espelho</option>
-                        </select>
-
-                    </div>
-                    
-                </div>
-                            
-                <div  id="espessuraRequisicoes" class="card text-center">
-        
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            Espessura
-                        </h4>
-                        <select id ="espessuraReq" name="espessura" class="form-select form-select-lg mb-3" aria-label="Large select example">
-                            <option value=""selected>Selecione</option>
-                            <option value="2mm">2mm</option>
-                            <option value="3mm">3mm</option>
-                            <option value="3.15mm">3.15mm</option>
-                            <option value="4mm">4mm</option>
-                            <option value="5mm">5mm</option>
-                            <option value="6mm">6mm</option>
-                            <option value="8mm">8mm</option>
-                        </select>
-
-                    </div>
-                    
-                </div>      
-        
-                <div id="chapaRequisicoes" class="card text-center">
-        
-                    <div class="card-body ">
-                        <h4 class="card-title">
-                            Chapa
-                        </h4>
-                        <select id="chapaReq" name="chapa" class="form-select form-select-lg mb-3" aria-label="Large select example">
-                            <option value=""selected>Selecione</option>
-                            <option value="1900cm x 3600cm">1900cm x 3600cm</option>
-                            <option value="2200cm x 3210cm">2200cm x 3210cm</option>
-                            <option value="2200cm x 3600cm">2200cm x 3600cm</option>
-                            <option value="2250cm x 3600cm">2250cm x 3600cm</option>
-                            <option value="2400cm x 3210cm">2400cm x 3210cm</option>
-                        </select>
-                    </div>
-                </div>
-
-            </div> 
-            
+    <?php
+        include "./components/selects.php"
+    ?>             
             <div id="fRP2">
 
                 <div id="quantidades" class="container mt-4 ">
@@ -104,29 +45,9 @@
 
         </div>
 
-        <div id="carrinhoRequisicoes" class="container mt-5 fw-light text-start ">
-            <section class="row py-5 bg-body-tertiary">
-                <div class="col ms-5 me-5">
-                    <h3>Itens</h3>
-                        <div id="conteudo">
-
-                        </div>
-                    
-            
-                    <div id="baixaRequisicoes" class="mt-5" style=" justify-content: end;  text-align: right;">
-                        <button type="submit" class="btn btn-secondary" style="text-align: right;">
-                            <i class="bi bi-check-circle"></i>
-                            Requisitar
-                        </button>
-
-                    </div>
-            
-                </div>
-            
-                
-            </section>
-
-        </div>
+        <?php
+            include "./components/itensCar.php"
+        ?>
     </form>
         <script src="requisicao.js"></script>
 
