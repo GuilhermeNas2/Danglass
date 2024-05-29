@@ -13,7 +13,7 @@ class Router {
             }
         }
         
-        header("Location: /login");
+        header("Location: Danglass/public/login");
     }
 }
 ?>

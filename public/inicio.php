@@ -1,11 +1,13 @@
 <?php
-
-    header('Content-Type: text/html; charset=utf-8');
-
-    require '../verifica.php';
     
-    if (isset($_SESSION['idUser']) && !empty($_SESSION['idUser'])):
-    
+    require '../src/auth.php';    
+    if (!Auth::check()) {
+        header("Location: /Danglass/public/login.php");
+        exit();
+    }  
+
+
+    require '../verifica.php'; 
     require '../conexao/conexao.php';
     require '../backEnd/log.php';
 

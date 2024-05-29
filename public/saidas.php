@@ -1,4 +1,12 @@
+<?php
+    require '../src/auth.php';
 
+    if (!Auth::check()) {
+        header("Location: /Danglass/public/login.php");
+        exit();
+    }
+   
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

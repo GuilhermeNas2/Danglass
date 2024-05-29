@@ -9,10 +9,10 @@
 </head>
 <body>
     
- <form class="form "action="/login" method="POST">
+ <form class="form" action="/Danglass/src/logar.php" method="post">
     <div class="card">
         <div class="card-top">
-            <img class="imglogin" src="logo_nova.png" alt="">
+            <img class="imglogin" src="./img/logo_nova.png" alt="">
             <h2 class="title">Login - Danglass</h2>
         </div>
 
@@ -32,13 +32,7 @@
     </div>
 
 
- </form>
-
+ </form> 
 
 </body>
 </html>
-<?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        Auth::login($_POST['username'], $_POST['password']);
-    }
-?>

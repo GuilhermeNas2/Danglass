@@ -1,27 +1,28 @@
 <?php
 session_start();
 
-class Auth {
-    public function login($email, $senha){
-        global $pdo;
+class Auth {    
 
-        $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :senha";
-        $sql = $pdo->prepare($sql);
-        $sql->bindValue("email" , $email);
-        $sql->bindValue("senha", $senha);
-        $sql->execute();
-
-        if($sql->rowCount() > 0 ){
-            $dado = $sql->fetch();            
-            $_SESSION['idUser'] = $dado['id'];          
-            $_SESSION['tipoUser'] = $dado['tipoUsuario'];  
-            $_SESSION['logged_in'] = true
-          
-        }else{
-            $_SESSION['logged_in'] = false
+    public function login($email, $senha){  
             
-        }
+            require '../conexao/conexao.php';
 
+            $conexao = new Conexao();
+            $conn = $conexao->getConn();
+            $sql = "SELECT * FROM usuarios WHERE email ='".$email."' AND senha ='".$senha."'";
+            $response = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($response);
+            
+            if($response){                            
+                $_SESSION['idUser'] = $row['id'];          
+                $_SESSION['tipoUser'] = $row['tipoUsuario'];  
+                $_SESSION['logged_in'] = true;
+                header("Location: /Danglass/public/home");
+                exit();
+            }else{
+                header("Location: /Danglass/public/login");
+                exit();            
+            }
     }
 
     public static function check() {
@@ -30,7 +31,7 @@ class Auth {
 
     public static function logout() {
         session_destroy();
-        header("Location: /login");
+        header("Location: /Danglass/public/login");
         exit();
     }
     

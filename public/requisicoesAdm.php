@@ -1,18 +1,26 @@
 <?php 
 
-require './conexao/conexao.php';
+    require '../src/auth.php';
 
-$conn = new Conexao(); 
-$conexao = $conn->getConn(); 
-$sql = "SELECT * FROM requisicoes";
-$result = mysqli_query($conexao, $sql);
+    if (!Auth::check()) {
+        header("Location: /Danglass/public/login.php");
+        exit();
+    }
 
-$data = array();
-if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_array($result)) {
-        $data[] = $row;
+
+    require './conexao/conexao.php';
+
+    $conn = new Conexao(); 
+    $conexao = $conn->getConn(); 
+    $sql = "SELECT * FROM requisicoes";
+    $result = mysqli_query($conexao, $sql);
+
+    $data = array();
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_array($result)) {
+            $data[] = $row;
+        };
     };
-};
 
 
 ?>
