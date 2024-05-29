@@ -1,21 +1,21 @@
 <?php
+namespace App\Core;
+use App\Models\UserModels;
+
 session_start();
 
 class Auth {    
+    private $userModel;
+
+    public function __construct(){
+        $this->userModel = new UserModels();
+    }
 
     public function login($email, $senha){  
-            
-            require '../conexao/conexao.php';
-
-            $conexao = new Conexao();
-            $conn = $conexao->getConn();
-            $sql = "SELECT * FROM usuarios WHERE email ='".$email."' AND senha ='".$senha."'";
-            $response = mysqli_query($conn, $sql);
-            $row = mysqli_fetch_assoc($response);
-            
+            $response = $this->userModel->getUserLogin($email, $senha);
             if($response){                            
-                $_SESSION['idUser'] = $row['id'];          
-                $_SESSION['tipoUser'] = $row['tipoUsuario'];  
+                $_SESSION['idUser'] = $response['id'];          
+                $_SESSION['tipoUser'] = $response['tipoUsuario'];  
                 $_SESSION['logged_in'] = true;
                 header("Location: /Danglass/public/home");
                 exit();

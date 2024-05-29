@@ -1,4 +1,6 @@
 <?php
+namespace App\Core;
+
 class Router {
     private $routes = [];
 
@@ -13,7 +15,7 @@ class Router {
             }
         }
         
-        header("Location: Danglass/public/login");
+        header("Location: /Danglass/public/login");
     }
 }
 ?>

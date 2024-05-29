@@ -9,7 +9,7 @@
 </head>
 <body>
     
- <form class="form" action="/Danglass/src/logar.php" method="post">
+ <form class="form" action="/Danglass/src/App/Controllers/logar.php" method="post">
     <div class="card">
         <div class="card-top">
             <img class="imglogin" src="./img/logo_nova.png" alt="">

@@ -1,8 +1,7 @@
 <?php
 
 class Log {
-    private $file = './mysqllog.txt';
-    
+    private $file = './mysqllog.txt';    
 
     public function __construct() {
 

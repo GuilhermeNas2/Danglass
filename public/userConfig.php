@@ -1,6 +1,6 @@
 <?php
-    require '../src/auth.php';
-
+    use Danglass\src\App\Core\Auth;
+    
     if (!Auth::check()) {
         header("Location: /Danglass/public/login.php");
         exit();

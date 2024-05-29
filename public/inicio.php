@@ -1,18 +1,15 @@
 <?php
-    
-    require '../src/auth.php';    
+    use App\Core\Auth;
+    use App\Models\Conexao;
+
+    require '../logs/log.php';
+
     if (!Auth::check()) {
         header("Location: /Danglass/public/login.php");
         exit();
     }  
 
-
-    require '../verifica.php'; 
-    require '../conexao/conexao.php';
-    require '../backEnd/log.php';
-
     $archive = new Log();    
-
     $conn = new Conexao(); 
     $conexao = $conn->getConn(); 
 

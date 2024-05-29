@@ -1,6 +1,8 @@
 <?php
-require_once '../src/router.php';
-require_once '../src/auth.php';
+require '../vendor/autoload.php';
+
+use App\Core\Router;
+use App\Core\Auth;
 
 $router = new Router();
 $baseURL = '/Danglass/public';
