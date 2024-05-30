@@ -6,17 +6,17 @@ function sendData(event) {
         event.preventDefault();
     } 
 
-    var titulo = document.querySelector("#tituloEstoque")
+    let titulo = document.querySelector("#tituloEstoque")
     let body = document.querySelector("#body");
     body.innerHTML = '';
     titulo.textContent = '';
     
-    var xhr = new XMLHttpRequest();
-    var url = "recebeEstoque.php"; // Script PHP para buscar os dados
-    var data = new FormData();
-    var tipo = document.getElementById("tipo").value; 
-    var chapa = document.getElementById("chapa").value;  
-    var espessura = document.getElementById("espessura").value; 
+    let xhr = new XMLHttpRequest();
+    let url = "recebeEstoque"; 
+    let data = new FormData();
+    let tipo = document.getElementById("tipo").value; 
+    let chapa = document.getElementById("chapa").value;  
+    let espessura = document.getElementById("espessura").value; 
 
     data.append("tipo", tipo);  
     data.append("chapa", chapa); 
@@ -27,7 +27,7 @@ function sendData(event) {
     xhr.onreadystatechange = function () {
 
             if (xhr.readyState === 4 && xhr.status === 200) {
-                var responseData = JSON.parse(xhr.responseText) // Recebe os dados do servidor
+                let responseData = JSON.parse(xhr.responseText) // Recebe os dados do servidor
                 ; // Obtém o elemento contêiner onde o novo elemento será adicionado
                
                 titulo.textContent = responseData.tipo;

@@ -1,5 +1,7 @@
 <?php
+    require '../vendor/autoload.php';
     use App\Models\Conexao;
+    
 try {    
     $conn = new Conexao(); 
     $conexao = $conn->getConn(); 

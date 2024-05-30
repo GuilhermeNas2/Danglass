@@ -8,7 +8,7 @@
 <body>
 <header class="navbar bg-body-tertiary">
     <div id="navBar" class="container">
-        <a class="link-offset-2 link-underline link-underline-opacity-0" href="inicio.php">
+        <a class="link-offset-2 link-underline link-underline-opacity-0" href="home">
             <h1 class="navbar-brand">Danglass</h1>        
         </a>
         <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">

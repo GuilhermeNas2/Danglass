@@ -3,6 +3,7 @@ require '../vendor/autoload.php';
 
 use App\Core\Router;
 use App\Core\Auth;
+use App\Controllers\EstoqueController;
 
 $router = new Router();
 $baseURL = '/Danglass/public';
@@ -69,6 +70,10 @@ $router->addRoute($baseURL . '/requisicoesAdm', function() use ($baseURL) {
         exit();
     }
     require 'requisicoesAdm.php';
+});
+
+$router->addRoute($baseURL . '/recebeEstoque', function() use ($baseURL) {    
+     EstoqueController::getEstoque();
 });
 
 $router->addRoute('/logout', function() {
