@@ -28,7 +28,7 @@ class ComposerStaticInit3cb33f77483d072d2ade2a75ac82d05a
         ),
         'Log\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/log',
+            0 => __DIR__ . '/../..' . '/logs',
         ),
         'App\\' => 
         array (

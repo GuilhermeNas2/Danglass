@@ -1119,3 +1119,563 @@ SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
   30/05/2024 16:30
 SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
   30/05/2024 16:30
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 16:58
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 16:58
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 16:58
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 16:58
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:00
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:00
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:00
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:00
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:00
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:00
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:00
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:01
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:01
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:01
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:02
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:03
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:03
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:04
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:04
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:04
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:04
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:04
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:04
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:04
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:10
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:11
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:11
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:11
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:15
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:15
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:15
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:15
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:15
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:15
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:15
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:16
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:16
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:16
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:17
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:17
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:18
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 17:18
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 17:18
+UPDATE usuarios SET tipoUsuario= WHERE id=
+  30/05/2024 17:47
+UPDATE usuarios SET tipoUsuario=0 WHERE id=
+  30/05/2024 17:54
+UPDATE usuarios SET tipoUsuario=0 WHERE id=
+  30/05/2024 17:55
+UPDATE usuarios SET tipoUsuario=0 WHERE id=
+  30/05/2024 17:56
+UPDATE usuarios SET tipoUsuario=0 WHERE id=
+  30/05/2024 17:57
+UPDATE usuarios SET tipoUsuario=0 WHERE id=
+  30/05/2024 17:58
+UPDATE usuarios SET tipoUsuario=0 WHERE id=
+  30/05/2024 17:58
+UPDATE usuarios SET tipoUsuario=0 WHERE id=12
+  30/05/2024 18:00
+UPDATE usuarios SET tipoUsuario=1 WHERE id=12
+  30/05/2024 18:01
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  1
+  30/05/2024 22:06
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Entradas -- entradas
+  30/05/2024 22:06
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Saída -- saidas
+  30/05/2024 22:06
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Requisições -- requisicoes
+  30/05/2024 22:06
+SELECT display,nome FROM viewTelas WHERE codigo =1--->Estoque -- estoque
+  30/05/2024 22:06
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 22:07
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 22:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 22:07
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 22:08
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  30/05/2024 22:08
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  30/05/2024 22:08
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:02
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:02
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:03
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:03
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:03
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:03
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:03
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:07
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:07
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:10
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:10
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:10
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:10
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:10
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:22
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:22
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:22
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:22
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:24
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:24
+SELECT tipoUsuario FROM usuarios WHERE id =12  --->  2
+  31/05/2024 20:25
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Estoque -- estoque
+  31/05/2024 20:25
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições-ADM -- requisicoesAdm
+  31/05/2024 20:25
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Requisições -- requisicoes
+  31/05/2024 20:25
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Saída -- saidas
+  31/05/2024 20:25
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Entradas -- entradas
+  31/05/2024 20:25
+SELECT display,nome FROM viewTelas WHERE codigo =2--->Configuração de Usuário -- userConfig
+  31/05/2024 20:25

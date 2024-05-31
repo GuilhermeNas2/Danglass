@@ -1,5 +1,6 @@
 <?php
-    require '../src/auth.php';
+    require '../vendor/autoload.php';
+    use App\Core\Auth;
 
     if (!Auth::check()) {
         header("Location: /Danglass/public/login.php");

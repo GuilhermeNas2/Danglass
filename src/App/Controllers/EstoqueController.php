@@ -3,12 +3,10 @@ namespace App\Controllers;
 use App\Models\Conexao;
 use App\Models\EstoqueModels;
 
-class EstoqueController{
-    // header("Access-Control-Allow-Origin: *");
-    // header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-    // header("Access-Control-Allow-Headers: Content-Type");    
+class EstoqueController{      
     private $result = array();
-    
+    private int $contador;
+
     public static function getEstoque(){            
         $cond ="";
 
@@ -33,32 +31,37 @@ class EstoqueController{
             $espessura = ""; 
         };
 
-        $estoque = new EstoqueModels();
-        $result = $estoque->getEstoque($cond);
-    
-        $contador = 0;
-        foreach($result as $qtd) {
-            $contador += $qtd['quantidade'];
-        }
-    
-        $tipo .= " ".$chapa." ".$espessura." (".$contador.")";
-    
+        if($tipo != ''){
+            $estoque = new EstoqueModels();
+            $result = $estoque->getEstoque($cond);    
+            $contador = $estoque->count($result);     
+            $tipo .= " ".$chapa." ".$espessura." (".$contador.")";
+        
+            $response = array(
+                "tipo"=> $tipo,
+                "chapa"=> $cond,
+                "espessura"=> $espessura,
+                "quantidade"=> $contador,
+                "data"=> $result
+            );
+        };     
+        
         $response = array(
-            "tipo"=> $tipo,
-            "chapa"=> $cond,
-            "espessura"=> $espessura,
-            "quantidade"=> $contador,
-            "data"=> $result
+            "erro"=>'Tipo do vidro é obrigatório'
         );
     
     
         echo json_encode($response);
     }
-   
-    //Recebendo as informações do formulário (estoque.php)
+    
+    public function addEstoque() {
+        $data = $_POST["array"];
+        $modulo = $_POST["modo"];
 
-
-    //Identificando o ID do produto a partir das informações (Tipo, Chapa, Espessura)
+        $estoque = new EstoqueModels();
+        $result = $estoque->updateEstoque($data, $modulo);
+    }
+    
 
    
     

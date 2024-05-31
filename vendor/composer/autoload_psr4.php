@@ -7,6 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Public\\' => array($baseDir . '/public'),
-    'Log\\' => array($baseDir . '/log'),
+    'Log\\' => array($baseDir . '/logs'),
     'App\\' => array($baseDir . '/src/App'),
 );

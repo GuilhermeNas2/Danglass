@@ -1,6 +1,7 @@
 <?php
+namespace Log;
 
-class Log {
+class Logs {
     private $file = './mysqllog.txt';    
 
     public function __construct() {

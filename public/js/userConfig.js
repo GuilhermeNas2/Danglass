@@ -14,7 +14,7 @@ function sendData(event) {
     const input = document.querySelector('#email').value;    
     
     $.ajax({
-        url: "./backEnd/getUser.php",
+        url: "getUser",
         method: "POST",
         dataType: "json",
         data: {
@@ -53,7 +53,7 @@ function updateUser(event) {
    const input = document.querySelector('select').value;   
     
     $.ajax({
-        url: "./backEnd/updateUser.php",
+        url: "updateUser",
         method: "POST",
         dataType: "json",
         data: {
@@ -74,7 +74,7 @@ function deleteUser(event) {
    event.preventDefault();   
 
     $.ajax({
-        url: "./backEnd/updateUser.php",
+        url: "deleteUser",
         method: "POST",
         dataType: "json",
         data: {            
