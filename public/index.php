@@ -4,10 +4,14 @@ require '../vendor/autoload.php';
 use App\Core\Router;
 use App\Core\Auth;
 use App\Controllers\EstoqueController;
+use App\Controllers\ReqController;
 use App\Controllers\UserController;
 
 $router = new Router();
 $baseURL = '/Danglass/public';
+
+
+// Rotas para as telas do frontEnd
 
 $router->addRoute($baseURL . '/login', function() use ($baseURL){
     if (Auth::check()) {
@@ -70,12 +74,31 @@ $router->addRoute($baseURL . '/requisicoesAdm', function() use ($baseURL) {
         header("Location: $baseURL/login");
         exit();
     }
+    $req = new ReqController();
+    $data = $req->getReq();
     require 'requisicoesAdm.php';
 });
+
+
+// Rotas de requisições AJAX para o backEnd
 
 $router->addRoute($baseURL . '/recebeEstoque', function() use ($baseURL) {    
      EstoqueController::getEstoque();
 });
+
+$router->addRoute($baseURL . '/updateEstoque', function() use ($baseURL) {    
+    EstoqueController::updateEstoque();
+});
+
+
+$router->addRoute($baseURL . '/updateReq', function() use ($baseURL) {        
+    ReqController::updateReq();
+});
+
+$router->addRoute($baseURL . '/deleteReq', function() use ($baseURL) {    
+    ReqController::deleteReq();
+});
+
 
 $router->addRoute($baseURL . '/getUser', function() use ($baseURL) {    
     UserController::getUser();

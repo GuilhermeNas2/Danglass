@@ -13,6 +13,18 @@ class UserModels{
         $this->log = new Logs();
     }
 
+    private function getTypeUser() {
+        $sql = "SELECT tipo FROM tipouser ";
+        $response = mysqli_query($this->conn, $sql);
+        $arrayType = array();
+
+        while($rowS = mysqli_fetch_assoc($response)){
+            $arrayType[] =  $rowS;
+        };
+        mysqli_free_result($response);
+        return $arrayType;
+    }
+
     public function getUserLogin($email, $senha) {
         $sql = "SELECT * FROM usuarios WHERE email ='".$email."' AND senha ='".$senha."'";
         $response = mysqli_query($this->conn, $sql);
@@ -44,19 +56,7 @@ class UserModels{
         );        
        mysqli_close($this->conn);  
        return $result;
-    }
-
-    private function getTypeUser() {
-        $sql = "SELECT tipo FROM tipouser ";
-        $response = mysqli_query($this->conn, $sql);
-        $arrayType = array();
-
-        while($rowS = mysqli_fetch_assoc($response)){
-            $arrayType[] =  $rowS;
-        };
-        mysqli_free_result($response);
-        return $arrayType;
-    }
+    }  
 
     public function deleteUser($id) {
         mysqli_begin_transaction($this->conn);
@@ -75,7 +75,7 @@ class UserModels{
                 "value" => "Usuario excluido"
             );       
 
-        } catch (mysqli_sql_exception $exception) {
+        } catch (\mysqli_sql_exception $exception) {
             $this->log->writeLog("\n".$sql." -----> ".$exception."\n");
             mysqli_rollback($this->conn);
             $result = array(
@@ -117,7 +117,7 @@ class UserModels{
             );
         
 
-        } catch (mysqli_sql_exception $exception) {
+        } catch (\mysqli_sql_exception $exception) {
             $this->log->writeLog("\n".$sql." -----> ".$exception."\n");
 
             mysqli_rollback($this->conn);

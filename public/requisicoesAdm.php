@@ -1,27 +1,11 @@
 <?php 
-
-    require '../src/auth.php';
+    require '../vendor/autoload.php';
+    use App\Core\Auth;    
 
     if (!Auth::check()) {
         header("Location: /Danglass/public/login.php");
         exit();
-    }
-
-
-    require './conexao/conexao.php';
-
-    $conn = new Conexao(); 
-    $conexao = $conn->getConn(); 
-    $sql = "SELECT * FROM requisicoes";
-    $result = mysqli_query($conexao, $sql);
-
-    $data = array();
-    if (mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_array($result)) {
-            $data[] = $row;
-        };
-    };
-
+    } 
 
 ?>
 <!DOCTYPE html>

@@ -1,4 +1,12 @@
+<?php
+    require '../vendor/autoload.php';
+    use App\Core\Auth;    
 
+    if (!Auth::check()) {
+        header("Location: /Danglass/public/login.php");
+        exit();
+    };  
+?>    
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -1,8 +1,8 @@
 let carrinho = []
-let divCar = document.getElementById("conteudo");
+const divCar = document.getElementById("conteudo");
 divCar.style = "font-size: 1.2rem;";
 
-let divError = document.createElement("span");
+const divError = document.createElement("span");
 let nome = 0;
 let z = 0;
 const caracteristicas = ['tipo','chapa','espessura','quantidade'];
@@ -12,10 +12,10 @@ divError.style = "font-size: 1.6rem; margin-top: 1em; display: flex; align-items
 function displaySelected() {
     divError.innerText = '';   
 
-    var input1 = document.getElementById("tipo").value;
-    var input2 = document.getElementById("chapa").value;
-    var input3 = document.getElementById("espessura").value;
-    var input4 = document.getElementById("quantidade").value;
+    const input1 = document.getElementById("tipo").value;
+    const input2 = document.getElementById("chapa").value;
+    const input3 = document.getElementById("espessura").value;
+    const input4 = document.getElementById("quantidade").value;
     
     if(input1 == ""  || input2 == "" || input3 == "" || input4 == "" ){
         divError.innerText = 'Os campos devem ser preenchidos.';
@@ -23,7 +23,7 @@ function displaySelected() {
         return
     } 
     
-    var displayText = "<div data-index='" + z + "'>" + input1 + ", " + input2 + ", "
+    const displayText = "<div data-index='" + z + "'>" + input1 + ", " + input2 + ", "
                          + input3 + " ( "+ input4 + " ) <i class='mx-2 fa-solid fa-xmark'></i> </div>";                        
                        
     carrinho.push({
@@ -66,7 +66,7 @@ function enviaBanco(event, modulo){
     z = 0;
     
     $.ajax({
-        url:"updatesEstoque.php",
+        url:"updateEstoque",
         method: "POST",
         dataType: "json",
         data:{

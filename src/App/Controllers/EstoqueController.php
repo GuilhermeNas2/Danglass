@@ -54,12 +54,13 @@ class EstoqueController{
         echo json_encode($response);
     }
     
-    public function addEstoque() {
+    public static function updateEstoque() {
         $data = $_POST["array"];
         $modulo = $_POST["modo"];
 
         $estoque = new EstoqueModels();
         $result = $estoque->updateEstoque($data, $modulo);
+        echo json_encode($result);
     }
     
 

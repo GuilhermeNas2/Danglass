@@ -14,19 +14,29 @@ const btnFinalizar = document.getElementById("btnFinalizar")
 btnFinalizar.addEventListener("click",(e)=>{
     e.preventDefault();
     $.ajax({
-        url:"deleteRequisicoes.php",
+        url:"deleteReq",
         method:"POST",
         dataType:"json",
         data:{
             selecionados:selecionados
         }
     })
-    .done((res)=>{
-         
-        location.reload(true);
-        Swal.fire(res['status']);  
+    .done((res)=>{    
+        Swal.fire({
+           text: res['status'],
+           preConfirm: async ()=> {
+            location.reload(true);
+           }
+        })
+       
+              
     })
-    .fail((error)=>{
-        console.log('2')
-    })
+    .fail((res)=>{
+        Swal.fire({
+            text: 'A operação falhou tente novamente',
+            preConfirm: async ()=> {
+             location.reload(true);
+            }
+         })
+    })   
 })
