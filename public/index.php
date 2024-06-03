@@ -6,6 +6,8 @@ use App\Core\Auth;
 use App\Controllers\EstoqueController;
 use App\Controllers\ReqController;
 use App\Controllers\UserController;
+use App\Controllers\ProductController;
+use App\Controllers\ScreenController;
 
 $router = new Router();
 $baseURL = '/Danglass/public';
@@ -26,23 +28,38 @@ $router->addRoute($baseURL . '/home', function() use ($baseURL) {
         header("Location: $baseURL/login");
         exit();
     }
+    $data = new ScreenController();
+    $data = $data->getScreens();
     require 'inicio.php';
 });
+
+$router->addRoute($baseURL . '/cadastroUsuario', function() use ($baseURL) {
+    if (!Auth::check()) {
+        header("Location: $baseURL/login");
+        exit();
+    }  
+    $arrayType = new UserController();
+    $arrayType = $arrayType->getTypeUser();
+    require 'cadastroUsuario.php';
+});
+
 
 $router->addRoute($baseURL .'/saidas', function() use ($baseURL) {
     if (!Auth::check()) {
         header("Location: $baseURL/login");
         exit();
     }
-    require 'saidas.php';
+    $req = new ProductController();
+    $req->getAllAtt('saidas.php');
 });
 
 $router->addRoute($baseURL .'/entradas', function() use ($baseURL) {
     if (!Auth::check()) {
         header("Location: $baseURL/login");
         exit();
-    }
-    require 'entradas.php';
+    } 
+    $req = new ProductController();
+    $req->getAllAtt('entradas.php');
 });
 
 $router->addRoute($baseURL . '/estoque', function() use ($baseURL) {
@@ -50,7 +67,8 @@ $router->addRoute($baseURL . '/estoque', function() use ($baseURL) {
         header("Location: $baseURL/login");
         exit();
     }
-    require 'estoque.php';
+    $req = new ProductController();
+    $req->getAllAtt('estoque.php');
 });
 
 $router->addRoute($baseURL . '/userConfig', function() use ($baseURL) {
@@ -66,7 +84,8 @@ $router->addRoute($baseURL . '/requisicoes', function() use ($baseURL) {
         header("Location: $baseURL/login");
         exit();
     }
-    require 'requisicoes.php';
+    $req = new ProductController();
+    $req->getAllAtt('requisicoes.php');
 });
 
 $router->addRoute($baseURL . '/requisicoesAdm', function() use ($baseURL) {
@@ -79,11 +98,14 @@ $router->addRoute($baseURL . '/requisicoesAdm', function() use ($baseURL) {
     require 'requisicoesAdm.php';
 });
 
-
 // Rotas de requisições AJAX para o backEnd
 
 $router->addRoute($baseURL . '/recebeEstoque', function() use ($baseURL) {    
      EstoqueController::getEstoque();
+});
+
+$router->addRoute($baseURL . '/enviaUsuario', function() use ($baseURL) {    
+    UserController::createUser();
 });
 
 $router->addRoute($baseURL . '/updateEstoque', function() use ($baseURL) {    
@@ -112,7 +134,7 @@ $router->addRoute($baseURL . '/deleteUser', function() use ($baseURL) {
     UserController::deleteUser();
 });
 
-$router->addRoute('/logout', function() {
+$router->addRoute($baseURL .'/logout', function() use ($baseURL) {
     Auth::logout();
 });
 

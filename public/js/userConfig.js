@@ -1,17 +1,14 @@
 let changeArr = []
 let id = '';
 
-
 const div = document.querySelector('#mensagem');
 const h2 = document.createElement('h2');
 const  divv = document.querySelector('#user');
 
 function sendData(event) {    
-    event.preventDefault();
-    h2.innerText = '';
-    
+    event.preventDefault();   
 
-    const input = document.querySelector('#email').value;    
+    let input = document.querySelector('#email').value;    
     
     $.ajax({
         url: "getUser",
@@ -37,11 +34,10 @@ function sendData(event) {
             
             select.appendChild(option);
         });    
-
-    }).fail((res)=> {
-       divv.innerText = ''; 
-       h2.innerText = 'Usuário não encontrado';
-       div.appendChild(h2); 
+        document.querySelector('#email').value = '';      
+    }).fail(()=> {       
+       Swal.fire('Usuário não encontrado'); 
+       document.querySelector('#email').value = '';        
     });
 };
 

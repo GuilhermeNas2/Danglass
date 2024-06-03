@@ -15,6 +15,12 @@ class UserController{
         return $id;
     }   
 
+    public static function getTypeUser() {
+        $result = new UserModels();
+        $arrayType = $result->getTypeUser();   
+        return $arrayType;
+    }
+
     public static function getUser() {
         $data = $_POST['valor'];
 
@@ -41,6 +47,15 @@ class UserController{
         $result = $result->deleteUser($id);
 
         echo json_encode($result);
+    }
+
+    public static function createUser() {
+        $data = $_POST['data'];
+        $result = new UserModels();
+
+        $result = $result->createUser($data);
+        echo json_encode($result);
+       
     }
 }
 

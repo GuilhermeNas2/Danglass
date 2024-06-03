@@ -13,13 +13,20 @@ class UserModels{
         $this->log = new Logs();
     }
 
-    private function getTypeUser() {
-        $sql = "SELECT tipo FROM tipouser ";
+    private function verifyEmail() {
+
+    }
+
+    public function getTypeUser() {
+        $sql = "SELECT tipo, codigo FROM tipouser ";
         $response = mysqli_query($this->conn, $sql);
         $arrayType = array();
 
         while($rowS = mysqli_fetch_assoc($response)){
-            $arrayType[] =  $rowS;
+            $arrayType[] =  array(
+                "tipo" => $rowS['tipo'],
+                "cod" => $rowS['codigo']
+            );
         };
         mysqli_free_result($response);
         return $arrayType;
@@ -31,6 +38,21 @@ class UserModels{
         $row = mysqli_fetch_assoc($response);
         return $row;
     }
+
+    public function getUserBasic($data, $key) {
+        $sql = "SELECT id,nome,tipoUsuario
+             FROM usuarios WHERE ".$key."='".$data."'";
+        $response = mysqli_query($this->conn, $sql);
+        $row = mysqli_fetch_assoc($response);      
+
+        $result = array( 
+            "id"=> $row['id'],
+            "nome"=> $row['nome'],    
+            "tipoUsuario"=> $row['tipoUsuario']            
+        );        
+       mysqli_close($this->conn);  
+       return $result;
+    }  
 
     public function getUser($data, $key) {
         $sql = "SELECT id,nome,
@@ -52,7 +74,7 @@ class UserModels{
             "id"=> $row['id'],
             "nome"=> $row['nome'],    
             "tipoUsuario"=> $row['tipoUsuario'],
-            "tipos"=> $arrayType
+            "tipos"=> $arrayType['tipo']
         );        
        mysqli_close($this->conn);  
        return $result;
@@ -87,6 +109,48 @@ class UserModels{
 
         return $result;
     }
+
+    public function createUser($data) {
+        $user = UserModels::getUserBasic($data['email'], 'email');
+        
+        if($user['id'] != NULL ) {
+            $result = array(
+                'value' => 'E-mail já cadastrado'
+            );
+            return $result;
+        }
+        UserModels::__construct();
+        mysqli_begin_transaction($this->conn);
+        try {
+            $sql = "INSERT INTO usuarios (nome, senha, email, tipoUsuario) values ('".$data['nome']."','".$data['senha']."','".$data['email']."',".$data['tipouser'].")";
+            
+            $response = mysqli_query($this->conn, $sql);
+            
+
+            if (!($response)) {
+                throw new \mysqli_sql_exception($this->conn->error);
+            }; 
+
+            mysqli_commit($this->conn);
+
+            $result[] = array(
+                "value" => "Usuario registrado com sucesso"
+            );
+
+        } catch (\mysqli_sql_exception $exception) { 
+
+            $this->log->writeLog("\n".$sql." -----> ".$exception."\n");
+            mysqli_rollback($this->conn);
+
+            $result[] = array(
+                "value" => "Operação não concluida"
+            );
+            http_response_code(500); 
+        };   
+        mysqli_close($this->conn);    
+
+        return $result;
+    }   
 
     public function updateUser($data, $id) {        
         mysqli_begin_transaction($this->conn);

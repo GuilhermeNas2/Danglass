@@ -1,5 +1,6 @@
 <?php
 namespace App\Models;
+use App\Models\Conexao;
 use Log\Logs;
 
 class EstoqueModels{

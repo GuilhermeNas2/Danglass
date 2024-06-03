@@ -1,22 +1,11 @@
 <?php 
-require './conexao/conexao.php';
-
-$conn = new Conexao(); 
-$conexao = $conn->getConn();     
-
-$sql = "SELECT tipo, codigo FROM tipouser ";
-$response = mysqli_query($conexao, $sql);
-$arrayType = array();
-
-while($rowS = mysqli_fetch_assoc($response)){    
-    $arrayType[] =  array(
-        "tipo" => $rowS['tipo'],
-        "cod" => $rowS['codigo']
-    );
-};
-
-mysqli_free_result($response);
-mysqli_close($conexao);
+    require '../vendor/autoload.php';
+    use App\Core\Auth;  
+    
+    if (!Auth::check()) {
+        header("Location: /Danglass/public/login.php");
+        exit();
+    }     
 ?>
 
 
@@ -29,22 +18,16 @@ mysqli_close($conexao);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>    
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="bg-dark" data-bs-theme="dark">
-    <header class="navbar navbar-expand-lg bg-body-tertiary">
-        <div id="navBar" class="container">
-            <h1 class="navbar-brand">Danglass</h1>            
-            <style>
-                button{
-                    cursor:pointer;                    
-                }
-            </style>                
-        </div>
-    </header>
-
+<?php
+        include "./components/menu.php"
+?>   
     <main class="w-100 m-auto form-container mt-5 d-flex justify-content-center" >
-        <form class = "w-25" id = "formCadastro" method="POST" action = "enviaUsuario.php">
+        <form class = "w-25" id = "formCadastro" onsubmit='sendUser(event)'>
            <h1 class="h3 mb-3 fw-normal text-center mt-2 mb-3">Cadastro de Usuário</h1> 
             <div class="form-floating">
                 <input type="text" class="form-control" id="nome" name= "nome" placeholder="nome" maxlength="100"/>
@@ -60,20 +43,18 @@ mysqli_close($conexao);
                 </div>
                 <div class="form-floating mt-3">
                     <select class="form-select" id="tipoUsuario" name="tipoUsuario" aria-label="Floating label select example">
-                      <option selected>Tipo do Usuário:</option>
+                      <option value="" selected>Tipo do Usuário:</option>
                       <?php
                             foreach($arrayType as $key => $value){
                                 ?>    <option value=" <?php echo $arrayType[$key]['cod'] ?>"> <?php echo $arrayType[$key]['tipo'] ?> </option> <?php
                             }
-                        ?>  
-                      <!-- <option value="0">Normal</option> 
-                      <option value="1">Administrador</option>
-                      <option value="2">Administrador Master</option>                   -->
+                        ?>                      
                     </select>
                 </div>      
             <button class="btn btn-primary w-100 py-2 mt-3" type ="submit">Cadastrar</button>
         </form>
     </main>
 
+    <script src='./js/createUser.js'></script>
 </body>
 </html>

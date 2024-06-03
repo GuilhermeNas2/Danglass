@@ -57,7 +57,7 @@ function displaySelected() {
 
 
 
-function enviaBanco(event, modulo){     
+function enviaBanco(event, modulo){    
    
     if (event) {
         event.preventDefault();

@@ -1,6 +1,5 @@
 <?php
 namespace App\Controllers;
-use App\Models\Conexao;
 use App\Models\ReqModels;
 
 class ReqController {

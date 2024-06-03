@@ -16,35 +16,25 @@
         </button>
 
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-            <div class="offcanvas-header">
-
-            
-                <h4 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel">Menu</h4>
-                
+            <div class="offcanvas-header">            
+                <h4 class="offcanvas-title text-light" id="offcanvasWithBothOptionsLabel">Menu</h4>                
             </div>
             <hr class="me-3 ms-3 mt-0">
-
             <ul class="nav nav-pills flex-column mb-auto ms-3" >
-
-                <li class="">
-                    
-                    <a class="nav-link text-light" href="PaginaInicial.html" class="nav-link active" aria-current="page">
-                        
+                <li class="">                    
+                    <a class="nav-link text-light" href="home" class="nav-link active" aria-current="page">                        
                         Página Inicial
                     </a>
                 </li>
-
-                <li class="">
-                    
-                    <a class="nav-link text-white" href="Entradas.html" class="nav-link active" aria-current="page">
-                        
+                <li class="">                    
+                    <a class="nav-link text-white" href="entradas" class="nav-link active" aria-current="page">                        
                         Entradas
                     </a>
                 </li>
 
                 <li class="">
                     
-                    <a class="nav-link text-white" href="saidas.php" class="nav-link active " aria-current="page">
+                    <a class="nav-link text-white" href="saidas" class="nav-link active " aria-current="page">
                         
                         Saídas
                     </a>
@@ -52,7 +42,7 @@
 
                 <li class="">
                     
-                    <a class="nav-link text-white" href="requisicoes.php" class="nav-link active" aria-current="page">
+                    <a class="nav-link text-white" href="requisicoes" class="nav-link active" aria-current="page">
                         
                         Requisições
                     </a>
@@ -60,7 +50,7 @@
 
                 <li class="">
                     
-                    <a class="nav-link text-white" href="requisicoesAdm.php" class="nav-link active" aria-current="page">
+                    <a class="nav-link text-white" href="requisicoesAdm" class="nav-link active" aria-current="page">
                         
                         Requisições - Adm
                     </a>
@@ -68,8 +58,7 @@
 
                 <li class="">
                     
-                    <a class="nav-link text-white" href="estoque.php" class="nav-link active" aria-current="page">
-                        
+                    <a class="nav-link text-white" href="estoque" class="nav-link active" aria-current="page">                        
                         Estoque
                     </a>
                 </li>
@@ -82,27 +71,19 @@
                 <a href="" class="d-flex aling-items-center link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
                 <i class="bi bi-person-circle me-2"></i>
                 <strong>Perfil</strong>
-                </a>
-                
-                <ul class="dropdown-menu text-small shadom show " style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -34px);" data-popper-placement="top-start">
+                </a>                
+                <ul class="dropdown-menu text-small shadom " style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -34px);" data-popper-placement="top-start">
                     <li>
-                        <a href="cadastroUsuario.php" class="dropdown-item">Cadastrar Usuário</a>
+                        <a href="cadastroUsuario" class="dropdown-item">Cadastrar Usuário</a>
                     </li>
-
-                    <hr class="mb-1">
-                    
+                    <hr class="mb-1">                    
                     <li>
-                        <a href="logout.php" class="dropdown-item">Sair</a>
+                        <a href="logout" class="dropdown-item">Sair</a>
                     </li>
-                </ul>
-                    
-            </div>
-                
-        
+                </ul>                    
+            </div>  
         </div>
-
     </div>
-
 </header>
 </body>
 </html>
